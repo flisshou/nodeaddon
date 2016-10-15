@@ -7,7 +7,7 @@
 
 Don't forget the **comma** when you update a new instance within the JSON object.
 
-2. The `"main" : "XXXX.js"`
+\2. The `"main" : "XXXX.js"`
 
 Make sure of the **value** pointing to the right JavaScript file.
 

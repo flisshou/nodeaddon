@@ -113,3 +113,9 @@ $ node hello.js
 >world
 
 ---
+
+##Additional 
+
+[Some simple debug might encounter](https://github.com/flisshou/nodeaddon/blob/master/debug.md)
+
+---
