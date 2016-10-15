@@ -1,14 +1,14 @@
 
-##Some situations might encounter
+##Debug
 
 ###package.json
 
-1. Adding the `"gypfile" : true`:
+- Adding the `"gypfile" : true`:
 
-Don't forget the **comma** when you update a new instance within the JSON object.
+	Don't forget the **comma** when you update a new instance within the JSON object.
 
-\2. The `"main" : "XXXX.js"`
+- The `"main" : "XXXX.js"`
 
-Make sure of the **value** pointing to the right JavaScript file.
+	Make sure of the **value** pointing to the right JavaScript file.
 
 ---

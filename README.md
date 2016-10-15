@@ -116,6 +116,6 @@ $ node hello.js
 
 ##Additional 
 
-[Some simple debug might encounter](https://github.com/flisshou/nodeaddon/blob/master/debug.md)
+[Some simple errors might encounter](https://github.com/flisshou/nodeaddon/blob/master/debug.md)
 
 ---
