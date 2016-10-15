@@ -3,7 +3,7 @@
 
 ###Step 1: Create a C++ file
 
-```
+```cpp
 //hello.cc
 
 #include <node.h>
@@ -37,7 +37,7 @@ NODE_MODULE(addon, init)	//No semi-colon after NODE_MODULE
 
 Create a file called `binding.gyp`
 
-```
+```javascipt
 {
 	"targets" : [
 		{
@@ -56,12 +56,12 @@ Create a file called `binding.gyp`
 
 In terminal:
 
-```
-npm init
+```bash
+$ npm init
 ```
 
-```
-sudo npm install -g node-gyp
+```bash
+$ sudo npm install -g node-gyp
 ```
 
 ---
@@ -70,7 +70,7 @@ sudo npm install -g node-gyp
 
 In package.json: add a key-value pair
 
-```
+```javascript
 "gypfile" : true
 ```
 
@@ -80,12 +80,12 @@ In package.json: add a key-value pair
 
 In terminal:
 
-```
-node-gyp configure
+```bash
+$ node-gyp configure
 ```
 
-```
-node-gyp build
+```bash
+$ node-gyp build
 ```
 
 ---
@@ -94,7 +94,7 @@ node-gyp build
 
 Create a JavaScript file:
 
-```
+```javascript
 //hello.js
 
 const addon = require('./build/Release/addon');
@@ -107,8 +107,8 @@ console.log(addon.hello());
 
 ###Step 7: Run
 
-```
-node hello.js 
+```bash
+$ node hello.js 
 ```
 >world
 
