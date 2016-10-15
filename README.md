@@ -37,7 +37,7 @@ NODE_MODULE(addon, init)	//No semi-colon after NODE_MODULE
 
 Create a file called `binding.gyp`
 
-```javascipt
+```javascript
 {
 	"targets" : [
 		{
