@@ -1,12 +1,6 @@
-##Essential Practice - Hello World
+#Essential Practice - Hello World
 
-###Set Environment
-
-```bash
-$ npm init
-```
-
-###Create C++ File
+##Create C++ File
 
 ```cpp
 //hello.cpp
@@ -30,16 +24,19 @@ void init(Local<Object> exports){
 NODE_MODULE(hello_addon, init)
 ```
 
-###Create `binding.gyp`
+##Create `binding.gyp`
 ```javascript
 {
 	targets: [
+        {
 	    "target_name": "hello_addon",
 	    "sources": ["hello.cpp"]
+	}
 ]
 }
 ```
 > Remember to match "target_name" with the first parameter in NODE_MODULE, 
+
 > and match "sources" to the right C++ filename as well.
 
 ###Create JavaScript File
@@ -52,7 +49,14 @@ console.log(addon.hello());
 ```
 
 > Remember to match the "target_name" when you require the module made by C++,
-> So that node-gyp could correctly integrate all of the files.
+
+> so that node-gyp could correctly integrate all of the files.
+
+###Set Environment
+
+```bash
+$ npm init
+```
 
 ###Build node-gyp
 
