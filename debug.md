@@ -18,6 +18,6 @@
 - When you want to configure and build `node-gyp`:
         
         You must go to the right directory.
-	Usually, we put `binding.gyp` and any other C++ files together in a `/cpp` directory.
+	Usually, we put the `binding.gyp` and any other C++ files together in a `/cpp` directory.
 	Other JavaScript files would be in the project directory.
 	
