@@ -2,15 +2,63 @@
 
 using namespace std;
 
-CplexCpp calculateValues(int value1, int value2) {
-
-  CplexCpp cplexcpp1;//建立物件
+void CplexCpp :: runCplex() {
+  cout << "CplexCpp is running..." << endl;
   IloEnv env;
 
-  cplexcpp1.cppValue = (value1 + value2) * 11;
+  try {
+    IloModel model(env);
+    IloCplex cplex(env);
 
-  env.out() << "ths cppValue is: " << cplexcpp1.cppValue << endl;
+    IloObjective obj;
+    IloNumVarArray var(env);
+    IloRangeArray rng(env);
 
-  return cplexcpp1;//回傳物件
+    populate(model,var, rng);
 
+    cplex.extract(model);
+
+    if (cplex.solve()) {
+      env.out() << "Solution Status ::" << cplex.getStatus()   << endl;
+      env.out() << "Solution Value  ::" << cplex.getObjValue() << endl;
+
+      IloNumArray values(env);
+
+      cplex.getValues(values, var);
+      env.out() << "Values        = " << values << endl;
+
+      cplex.getSlacks(values, rng);
+      env.out() << "Slacks        = " << values << endl;
+
+      cplex.getDuals(values, rng);
+      env.out() << "Duals         = " << values << endl;
+
+      cplex.getReducedCosts(values, var);
+      env.out() << "Reduced Costs = " << values << endl;
+    }
+  } catch (IloException& e) {
+    cerr << "Concert Excpetion Caught: " << e << endl;
+  } catch (...) {
+    cerr << "Unknown Exception Caught: " << endl;
+  }
+
+  env.end();
+}
+
+void CplexCpp :: define_DataSize (int workers, int shifts, int days) {
+  this->indiceI = workers;
+  this->indiceJ = shifts;
+  this->indiceK = days;
+
+  cout << "[i, j, k] = [" << workers << ", " << shifts << ", " << days << "]" << endl;
+}
+
+void CplexCpp :: define_WeekBounds (int min, int max) {
+  this->Wmin = min;
+  this->Wmax = max;
+}
+
+void CplexCpp :: define_DayBounds (int min, int max) {
+  this->Dmin = min;
+  this->Dmax = max;
 }

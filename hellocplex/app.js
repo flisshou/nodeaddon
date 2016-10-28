@@ -11,9 +11,8 @@ var users = require('./routes/users');
 var app = express();
 
 //node-gyp
-const cplexcpp = require('./cpp/Build/Release/cplexcpp');
-cplexcpp.hello_cpp("fliss");
-cplexcpp.hello_cplex();
+var cplexcpp = require('/Users/flisshou/Desktop/nodeaddon/hellocplex/cpp/build/Release/cplexcpp');
+console.log(cplexcpp.define_data_size(3, 2, 4));
 // console.log("required the cplexcpp in local app.js...");
 
 // view engine setup
