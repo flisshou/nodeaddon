@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3572C5C0AB09EDCB7F850AE7 /* cplexcpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = C09A2FA2431558B138FEE090 /* cplexcpp.cc */; };
+		6FA1BD6FBEC496993B9C712A /* libcplexdistmip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 033AC399DDCE3B8A3AB08DF5 /* libcplexdistmip.a */; };
+		829C6882B7AC28835559C88F /* libcplex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D85C5FAF5628F090118F54 /* libcplex.a */; };
+		EAC1CAD79D34D694E5CE76D1 /* libilocplex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1934DE103C8915366132AF /* libilocplex.a */; };
+		FC1D8CBA9644D3CB78F24860 /* cplexcpp_node.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FF522D0B6F51A9F2EBD54 /* cplexcpp_node.cc */; };
+		FF77F9F84053B9F6B5C65E69 /* libconcert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF9E9A7B6DFD636107BBB2F /* libconcert.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		033AC399DDCE3B8A3AB08DF5 /* libcplexdistmip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcplexdistmip.a; path = "/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/lib/x86-64_osx/static_pic/libcplexdistmip.a"; sourceTree = "<group>"; };
+		0B3FF522D0B6F51A9F2EBD54 /* cplexcpp_node.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cplexcpp_node.cc; sourceTree = "<group>"; };
+		5994D4CAAF6CF72A4AD8621C /* binding.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = binding.gyp; sourceTree = "<group>"; };
+		86992F765EC6B37225C03A0F /* addon.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = addon.gypi; path = "../../../../../../opt/local/lib/node_modules/node-gyp/addon.gypi"; sourceTree = "<group>"; };
+		86DA05936966AB7017271718 /* config.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = config.gypi; path = build/config.gypi; sourceTree = "<group>"; };
+		88D85C5FAF5628F090118F54 /* libcplex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcplex.a; path = "/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/lib/x86-64_osx/static_pic/libcplex.a"; sourceTree = "<group>"; };
+		8EF37E61849CCC36D7EDC865 /* cplexcpp.node */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = cplexcpp.node; sourceTree = BUILT_PRODUCTS_DIR; };
+		916EAA1406E65A1CF3A7985F /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = "../../../../.node-gyp/4.4.3/include/node/common.gypi"; sourceTree = "<group>"; };
+		BD1934DE103C8915366132AF /* libilocplex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libilocplex.a; path = "/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/lib/x86-64_osx/static_pic/libilocplex.a"; sourceTree = "<group>"; };
+		C09A2FA2431558B138FEE090 /* cplexcpp.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cplexcpp.cc; sourceTree = "<group>"; };
+		EEF9E9A7B6DFD636107BBB2F /* libconcert.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libconcert.a; path = "/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/concert/lib/x86-64_osx/static_pic/libconcert.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57AABFAFB24A95D22480607F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF77F9F84053B9F6B5C65E69 /* libconcert.a in Frameworks */,
+				829C6882B7AC28835559C88F /* libcplex.a in Frameworks */,
+				6FA1BD6FBEC496993B9C712A /* libcplexdistmip.a in Frameworks */,
+				EAC1CAD79D34D694E5CE76D1 /* libilocplex.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38885F38CBC875FB50D53A58 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				86992F765EC6B37225C03A0F /* addon.gypi */,
+				5994D4CAAF6CF72A4AD8621C /* binding.gyp */,
+				916EAA1406E65A1CF3A7985F /* common.gypi */,
+				86DA05936966AB7017271718 /* config.gypi */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		52DAC429CD7D0843E6A5EBFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEF9E9A7B6DFD636107BBB2F /* libconcert.a */,
+				88D85C5FAF5628F090118F54 /* libcplex.a */,
+				033AC399DDCE3B8A3AB08DF5 /* libcplexdistmip.a */,
+				BD1934DE103C8915366132AF /* libilocplex.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A764062BFA78F21CE617553 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C09A2FA2431558B138FEE090 /* cplexcpp.cc */,
+				0B3FF522D0B6F51A9F2EBD54 /* cplexcpp_node.cc */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		74FB431A6F457CFAA99DF565 = {
+			isa = PBXGroup;
+			children = (
+				5A764062BFA78F21CE617553 /* Source */,
+				52DAC429CD7D0843E6A5EBFD /* Frameworks */,
+				98B569F7BC93ABD51E535685 /* Products */,
+				38885F38CBC875FB50D53A58 /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		98B569F7BC93ABD51E535685 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EF37E61849CCC36D7EDC865 /* cplexcpp.node */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59D06FB3A753CD8A383B55F5 /* cplexcpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 822E1AB95E44D881D172FFF0 /* Build configuration list for PBXNativeTarget "cplexcpp" */;
+			buildPhases = (
+				AF20C3A8F4C64A779CD62510 /* Sources */,
+				57AABFAFB24A95D22480607F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cplexcpp;
+			productName = cplexcpp;
+			productReference = 8EF37E61849CCC36D7EDC865 /* cplexcpp.node */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35108566DD7B7EB466D59581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 4C650493AFEDDCC6E69C8CC5 /* Build configuration list for PBXProject "binding" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 74FB431A6F457CFAA99DF565;
+			projectDirPath = ..;
+			projectRoot = "";
+			targets = (
+				59D06FB3A753CD8A383B55F5 /* cplexcpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF20C3A8F4C64A779CD62510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3572C5C0AB09EDCB7F850AE7 /* cplexcpp.cc in Sources */,
+				FC1D8CBA9644D3CB78F24860 /* cplexcpp_node.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6E6920ED8E0647812495A381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Debug;
+		};
+		7F65EC303631B3128D07E83A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXECUTABLE_EXTENSION = node;
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NODE_GYP_MODULE_NAME=cplexcpp",
+					"USING_UV_SHARED=1",
+					"USING_V8_SHARED=1",
+					"V8_DEPRECATION_WARNINGS=1",
+					"_DARWIN_USE_64_BIT_INODE=1",
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					__MACOSX_CORE__,
+					BUILDING_NODE_EXTENSION,
+					DEBUG,
+					_DEBUG,
+				);
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/flisshou/.node-gyp/4.4.3/include/node",
+					"/Users/flisshou/.node-gyp/4.4.3/src",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/uv/include",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/v8/include",
+					/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/concert/include/,
+					/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/concert/lib/x86-64_osx/static_pic",
+					"/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/lib/x86-64_osx/static_pic",
+				);
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-DIL_STD",
+				);
+				OTHER_CPLUPLUSFLAGS = "-DIL_STD";
+				OTHER_LDFLAGS = (
+					"-undefined dynamic_lookup",
+					"-Wl,-search_paths_first",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = cplexcpp;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		B6EBA6824539727A0A78C8F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXECUTABLE_EXTENSION = node;
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NODE_GYP_MODULE_NAME=cplexcpp",
+					"USING_UV_SHARED=1",
+					"USING_V8_SHARED=1",
+					"V8_DEPRECATION_WARNINGS=1",
+					"_DARWIN_USE_64_BIT_INODE=1",
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					__MACOSX_CORE__,
+					BUILDING_NODE_EXTENSION,
+				);
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/flisshou/.node-gyp/4.4.3/include/node",
+					"/Users/flisshou/.node-gyp/4.4.3/src",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/uv/include",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/v8/include",
+					/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/concert/include/,
+					/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/concert/lib/x86-64_osx/static_pic",
+					"/Users/flisshou/Applications/IBM/ILOG/CPLEX_Studio_Community1263/cplex/lib/x86-64_osx/static_pic",
+				);
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-DIL_STD",
+				);
+				OTHER_CPLUPLUSFLAGS = "-DIL_STD";
+				OTHER_LDFLAGS = (
+					"-undefined dynamic_lookup",
+					"-Wl,-search_paths_first",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = cplexcpp;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		F0FE067650554857AB1E411A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C650493AFEDDCC6E69C8CC5 /* Build configuration list for PBXProject "binding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FE067650554857AB1E411A /* Release */,
+				6E6920ED8E0647812495A381 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		822E1AB95E44D881D172FFF0 /* Build configuration list for PBXNativeTarget "cplexcpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6EBA6824539727A0A78C8F6 /* Release */,
+				7F65EC303631B3128D07E83A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35108566DD7B7EB466D59581 /* Project object */;
+}
