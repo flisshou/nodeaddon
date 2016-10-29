@@ -50,7 +50,8 @@ void CplexCpp :: define_DataSize (int workers, int shifts, int days) {
   this->indiceJ = shifts;
   this->indiceK = days;
 
-  cout << "[i, j, k] = [" << workers << ", " << shifts << ", " << days << "]" << endl;
+  cout << "[i, j, k] = [" << this->indiceI << ", " << this->indiceJ << ", " << this->indiceK << "]" << endl;
+  cout << this->indiceI + this->indiceJ + this->indiceK << endl;
 }
 
 void CplexCpp :: define_WeekBounds (int min, int max) {

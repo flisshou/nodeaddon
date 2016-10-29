@@ -7,11 +7,12 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var api = require('./routes/api');
 
 var app = express();
 
 //node-gyp
-var cplexcpp = require('/Users/flisshou/Desktop/nodeaddon/hellocplex/cpp/build/Release/cplexcpp');
+var cplexcpp = require('./cpp/build/Release/cplexcpp');
 console.log(cplexcpp.define_data_size(3, 2, 4));
 // console.log("required the cplexcpp in local app.js...");
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/api/v1', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
