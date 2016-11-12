@@ -13,7 +13,8 @@
                                    "xcode_settings": {"GCC_ENABLE_CPP_EXCEPTIONS": "YES",
                                                       "OTHER_CFLAGS": ["-DIL_STD"],
                                                       "OTHER_CPLUPLUSFLAGS": ["-DIL_STD"],
-                                                      
+                                                      "CLANG_CXX_LIBRARY": "libstdc++",
+                                                      "CLANG_CXX_LANGUAGE_STANDARD": "c++11",
                                                       "MACOSX_DEPLOYMENT_TARGET": "10.7"}
                                    }
                     ]]

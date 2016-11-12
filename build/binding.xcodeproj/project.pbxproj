@@ -1,0 +1,269 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC4C574611167EFC2E71E42A /* hello.cc in Sources */ = {isa = PBXBuildFile; fileRef = 20A1CAA8CEF6E1F6CB698087 /* hello.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A16821FE1CE857C21FED573 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = "../../.node-gyp/4.4.3/include/node/common.gypi"; sourceTree = "<group>"; };
+		20A1CAA8CEF6E1F6CB698087 /* hello.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello.cc; sourceTree = "<group>"; };
+		254E833C7BE0347206C55BBB /* addon.node */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = addon.node; sourceTree = BUILT_PRODUCTS_DIR; };
+		5994D4CAAF6CF72A4AD8621C /* binding.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = binding.gyp; sourceTree = "<group>"; };
+		86DA05936966AB7017271718 /* config.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = config.gypi; path = build/config.gypi; sourceTree = "<group>"; };
+		CD38F3B6602D97B48F5C8734 /* addon.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = addon.gypi; path = "../../../../opt/local/lib/node_modules/node-gyp/addon.gypi"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7D294D848E546EA77AAF58B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31103589EDAD12F7C0BFBA22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				254E833C7BE0347206C55BBB /* addon.node */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38885F38CBC875FB50D53A58 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				CD38F3B6602D97B48F5C8734 /* addon.gypi */,
+				5994D4CAAF6CF72A4AD8621C /* binding.gyp */,
+				0A16821FE1CE857C21FED573 /* common.gypi */,
+				86DA05936966AB7017271718 /* config.gypi */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		CE1625FFB3C961F8F90D7E10 = {
+			isa = PBXGroup;
+			children = (
+				ED92586A8B5B3A401788CF42 /* Source */,
+				31103589EDAD12F7C0BFBA22 /* Products */,
+				38885F38CBC875FB50D53A58 /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		ED92586A8B5B3A401788CF42 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				20A1CAA8CEF6E1F6CB698087 /* hello.cc */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		873E6356991A742EB4BDB84D /* addon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E402C3FD8D268DF2483EC6D6 /* Build configuration list for PBXNativeTarget "addon" */;
+			buildPhases = (
+				652D6F8A2A8EB900657F914B /* Sources */,
+				B7D294D848E546EA77AAF58B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = addon;
+			productName = addon;
+			productReference = 254E833C7BE0347206C55BBB /* addon.node */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35108566DD7B7EB466D59581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 4C650493AFEDDCC6E69C8CC5 /* Build configuration list for PBXProject "binding" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = CE1625FFB3C961F8F90D7E10;
+			projectDirPath = ..;
+			projectRoot = "";
+			targets = (
+				873E6356991A742EB4BDB84D /* addon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		652D6F8A2A8EB900657F914B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4C574611167EFC2E71E42A /* hello.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41E460EEFC490E0BF1623EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXECUTABLE_EXTENSION = node;
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NODE_GYP_MODULE_NAME=addon",
+					"USING_UV_SHARED=1",
+					"USING_V8_SHARED=1",
+					"V8_DEPRECATION_WARNINGS=1",
+					"_DARWIN_USE_64_BIT_INODE=1",
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					BUILDING_NODE_EXTENSION,
+				);
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/flisshou/.node-gyp/4.4.3/include/node",
+					"/Users/flisshou/.node-gyp/4.4.3/src",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/uv/include",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/v8/include",
+				);
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = (
+					"-undefined dynamic_lookup",
+					"-Wl,-search_paths_first",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = addon;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		6E6920ED8E0647812495A381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Debug;
+		};
+		9DB1FB0768EF0F6CC3A426FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXECUTABLE_EXTENSION = node;
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NODE_GYP_MODULE_NAME=addon",
+					"USING_UV_SHARED=1",
+					"USING_V8_SHARED=1",
+					"V8_DEPRECATION_WARNINGS=1",
+					"_DARWIN_USE_64_BIT_INODE=1",
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					BUILDING_NODE_EXTENSION,
+					DEBUG,
+					_DEBUG,
+				);
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/flisshou/.node-gyp/4.4.3/include/node",
+					"/Users/flisshou/.node-gyp/4.4.3/src",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/uv/include",
+					"/Users/flisshou/.node-gyp/4.4.3/deps/v8/include",
+				);
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = (
+					"-undefined dynamic_lookup",
+					"-Wl,-search_paths_first",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = addon;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		F0FE067650554857AB1E411A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C650493AFEDDCC6E69C8CC5 /* Build configuration list for PBXProject "binding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FE067650554857AB1E411A /* Release */,
+				6E6920ED8E0647812495A381 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		E402C3FD8D268DF2483EC6D6 /* Build configuration list for PBXNativeTarget "addon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41E460EEFC490E0BF1623EF4 /* Release */,
+				9DB1FB0768EF0F6CC3A426FD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35108566DD7B7EB466D59581 /* Project object */;
+}

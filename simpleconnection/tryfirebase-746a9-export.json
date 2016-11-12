@@ -1,0 +1,86 @@
+{
+  "server" : {
+    "saving-data" : {
+      "fireblog" : {
+        "users" : [ {
+          "FlissHou" : {
+            "date_of_birth" : "Mar 3, 1990",
+            "full_name" : "Ya Fang Hou"
+          },
+          "FrankWang" : {
+            "date_of_birth" : "Feb 2, 1990",
+            "full_name" : "You Siang Wang"
+          },
+          "GaryYeh" : {
+            "date_of_birth" : "Apr 4, 1990",
+            "full_name" : "How Ping Yeh"
+          },
+          "SiangLin" : {
+            "date_of_birth" : "Jan 1, 1990",
+            "full_name" : "Sheng Siang Lin"
+          }
+        } ]
+      }
+    }
+  },
+  "testdata" : {
+    "cplex" : {
+      "users" : [ {
+        "cplex_alternative_parameters" : {
+          "employee_1" : [ {
+            "end" : "1400",
+            "start" : "0700"
+          }, {
+            "end" : "1400",
+            "start" : "0700"
+          } ],
+          "employee_2" : [ {
+            "end" : "2200",
+            "start" : "0700"
+          }, {
+            "end" : "1400",
+            "start" : "0700"
+          } ],
+          "employee_3" : [ {
+            "end" : "2200",
+            "start" : "1400"
+          }, {
+            "end" : "0000",
+            "start" : "0000"
+          } ],
+          "employee_4" : [ {
+            "end" : "1400",
+            "start" : "0700"
+          }, {
+            "end" : "0000",
+            "start" : "0000"
+          } ],
+          "employee_5" : [ {
+            "end" : "2200",
+            "start" : "1400"
+          }, {
+            "end" : "1400",
+            "start" : "0700"
+          } ]
+        },
+        "cplex_employees_parameters" : {
+          "employee_1" : [ 1, 0, 1, 0 ],
+          "employee_2" : [ 1, 1, 1, 0 ],
+          "employee_3" : [ 0, 1, 0, 0 ],
+          "employee_4" : [ 1, 0, 0, 0 ],
+          "employee_5" : [ 0, 1, 1, 0 ]
+        },
+        "cplex_managers_parameters" : {
+          "dailly_bounds" : {
+            "Dmax" : 15,
+            "Dmin" : 7
+          },
+          "weekly_bounds" : {
+            "Wmax" : 8,
+            "Wmin" : 0
+          }
+        }
+      } ]
+    }
+  }
+}

@@ -12,9 +12,12 @@ var api = require('./routes/api');
 var app = express();
 
 //node-gyp
-var cplexcpp = require('./cpp/build/Release/cplexcpp');
-console.log(cplexcpp.define_data_size(3, 2, 4));
+// var cplexcpp = require('./cpp/build/Release/cplexcpp');
 // console.log("required the cplexcpp in local app.js...");
+// console.log(cplexcpp.define_data_size(3, 2, 4));
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

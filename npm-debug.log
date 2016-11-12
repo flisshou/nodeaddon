@@ -8,227 +8,61 @@
 7 verbose install where, peers [ '/Users/flisshou/Desktop/nodeaddon', [] ]
 8 verbose installManyTop reading for lifecycle /Users/flisshou/Desktop/nodeaddon/package.json
 9 info preinstall nodeaddon@1.0.0
-10 verbose installManyTop reading scoped package data from /Users/flisshou/Desktop/nodeaddon/node_modules/nan/package.json
-11 verbose readDependencies loading dependencies from /Users/flisshou/Desktop/nodeaddon/package.json
-12 verbose targetResolver reading package data from /Users/flisshou/Desktop/nodeaddon/node_modules/nan/package.json
-13 silly cache add args [ 'bindings@~1.2.1', null ]
-14 verbose cache add spec bindings@~1.2.1
-15 silly cache add parsed spec Result {
-15 silly cache add   raw: 'bindings@~1.2.1',
-15 silly cache add   scope: null,
-15 silly cache add   name: 'bindings',
-15 silly cache add   rawSpec: '~1.2.1',
-15 silly cache add   spec: '>=1.2.1 <1.3.0',
-15 silly cache add   type: 'range' }
-16 silly addNamed bindings@>=1.2.1 <1.3.0
-17 verbose addNamed ">=1.2.1 <1.3.0" is a valid semver range for bindings
-18 silly addNameRange { name: 'bindings', range: '>=1.2.1 <1.3.0', hasData: false }
-19 silly mapToRegistry name bindings
-20 silly mapToRegistry using default registry
-21 silly mapToRegistry registry https://registry.npmjs.org/
-22 silly mapToRegistry data Result {
-22 silly mapToRegistry   raw: 'bindings',
-22 silly mapToRegistry   scope: null,
-22 silly mapToRegistry   name: 'bindings',
-22 silly mapToRegistry   rawSpec: '',
-22 silly mapToRegistry   spec: 'latest',
-22 silly mapToRegistry   type: 'tag' }
-23 silly mapToRegistry uri https://registry.npmjs.org/bindings
-24 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
-25 verbose request uri https://registry.npmjs.org/bindings
-26 verbose request no auth needed
-27 info attempt registry request try #1 at 下午6:07:12
-28 verbose request id 34c0583788fdec2f
-29 http request GET https://registry.npmjs.org/bindings
-30 http 200 https://registry.npmjs.org/bindings
-31 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
-31 verbose headers   etag: '"C1AW6UVQGY4VZQGFC1WTIGMDV"',
-31 verbose headers   'content-type': 'application/json',
-31 verbose headers   'content-encoding': 'gzip',
-31 verbose headers   'cache-control': 'max-age=300',
-31 verbose headers   'content-length': '3811',
-31 verbose headers   'accept-ranges': 'bytes',
-31 verbose headers   date: 'Sat, 15 Oct 2016 10:07:14 GMT',
-31 verbose headers   via: '1.1 varnish',
-31 verbose headers   age: '0',
-31 verbose headers   connection: 'keep-alive',
-31 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
-31 verbose headers   'x-cache': 'HIT',
-31 verbose headers   'x-cache-hits': '1',
-31 verbose headers   'x-timer': 'S1476526033.289312,VS0,VE775',
-31 verbose headers   vary: 'Accept-Encoding' }
-32 silly get cb [ 200,
-32 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
-32 silly get     etag: '"C1AW6UVQGY4VZQGFC1WTIGMDV"',
-32 silly get     'content-type': 'application/json',
-32 silly get     'content-encoding': 'gzip',
-32 silly get     'cache-control': 'max-age=300',
-32 silly get     'content-length': '3811',
-32 silly get     'accept-ranges': 'bytes',
-32 silly get     date: 'Sat, 15 Oct 2016 10:07:14 GMT',
-32 silly get     via: '1.1 varnish',
-32 silly get     age: '0',
-32 silly get     connection: 'keep-alive',
-32 silly get     'x-served-by': 'cache-hkg6825-HKG',
-32 silly get     'x-cache': 'HIT',
-32 silly get     'x-cache-hits': '1',
-32 silly get     'x-timer': 'S1476526033.289312,VS0,VE775',
-32 silly get     vary: 'Accept-Encoding' } ]
-33 verbose get saving bindings to /Users/flisshou/.npm/registry.npmjs.org/bindings/.cache.json
-34 verbose correctMkdir /Users/flisshou/.npm correctMkdir not in flight; initializing
-35 silly addNameRange number 2 { name: 'bindings', range: '>=1.2.1 <1.3.0', hasData: true }
-36 silly addNameRange versions [ 'bindings',
-36 silly addNameRange   [ '0.0.1',
-36 silly addNameRange     '0.1.0',
-36 silly addNameRange     '0.1.1',
-36 silly addNameRange     '0.2.0',
-36 silly addNameRange     '0.2.1',
-36 silly addNameRange     '0.2.2',
-36 silly addNameRange     '0.2.3',
-36 silly addNameRange     '0.2.4',
-36 silly addNameRange     '0.3.0',
-36 silly addNameRange     '0.4.0',
-36 silly addNameRange     '1.0.0',
-36 silly addNameRange     '1.1.0',
-36 silly addNameRange     '1.1.1',
-36 silly addNameRange     '1.2.0',
-36 silly addNameRange     '1.2.1' ] ]
-37 silly addNamed bindings@1.2.1
-38 verbose addNamed "1.2.1" is a plain semver version for bindings
-39 silly mapToRegistry name bindings
-40 silly mapToRegistry using default registry
-41 silly mapToRegistry registry https://registry.npmjs.org/
-42 silly mapToRegistry data Result {
-42 silly mapToRegistry   raw: 'bindings',
-42 silly mapToRegistry   scope: null,
-42 silly mapToRegistry   name: 'bindings',
-42 silly mapToRegistry   rawSpec: '',
-42 silly mapToRegistry   spec: 'latest',
-42 silly mapToRegistry   type: 'tag' }
-43 silly mapToRegistry uri https://registry.npmjs.org/bindings
-44 verbose addRemoteTarball https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz not in flight; adding
-45 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
-45 verbose addRemoteTarball   '14ad6113812d2d37d72e67b4cacb4bb726505f11' ]
-46 info retry fetch attempt 1 at 下午6:07:14
-47 info attempt registry request try #1 at 下午6:07:14
-48 http fetch GET https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
-49 http fetch 200 https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
-50 silly fetchAndShaCheck shasum 14ad6113812d2d37d72e67b4cacb4bb726505f11
-51 verbose addTmpTarball /var/folders/fd/f70s3t3100n4ktl1g9c5pzq00000gn/T/npm-1550-a89cff1f/registry.npmjs.org/bindings/-/bindings-1.2.1.tgz not in flight; adding
-52 verbose addTmpTarball already have metadata; skipping unpack for bindings@1.2.1
-53 verbose correctMkdir /Users/flisshou/.npm correctMkdir not in flight; initializing
-54 silly cache afterAdd bindings@1.2.1
-55 verbose afterAdd /Users/flisshou/.npm/bindings/1.2.1/package/package.json not in flight; writing
-56 verbose correctMkdir /Users/flisshou/.npm correctMkdir not in flight; initializing
-57 verbose afterAdd /Users/flisshou/.npm/bindings/1.2.1/package/package.json written
-58 silly install resolved [ { name: 'bindings',
-58 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
-58 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
-58 silly install resolved     version: '1.2.1',
-58 silly install resolved     author:
-58 silly install resolved      { name: 'Nathan Rajlich',
-58 silly install resolved        email: 'nathan@tootallnate.net',
-58 silly install resolved        url: 'http://tootallnate.net' },
-58 silly install resolved     repository:
-58 silly install resolved      { type: 'git',
-58 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
-58 silly install resolved     main: './bindings.js',
-58 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
-58 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
-58 silly install resolved     license: 'MIT',
-58 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
-58 silly install resolved     _id: 'bindings@1.2.1',
-58 silly install resolved     scripts: {},
-58 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
-58 silly install resolved     _from: 'bindings@>=1.2.1 <1.3.0',
-58 silly install resolved     _npmVersion: '1.4.14',
-58 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
-58 silly install resolved     maintainers: [ [Object], [Object] ],
-58 silly install resolved     dist:
-58 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
-58 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
-58 silly install resolved     directories: {},
-58 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' } ]
-59 info install bindings@1.2.1 into /Users/flisshou/Desktop/nodeaddon
-60 info installOne bindings@1.2.1
-61 verbose installOne of bindings to /Users/flisshou/Desktop/nodeaddon not in flight; installing
-62 verbose correctMkdir /Users/flisshou/.npm/_locks correctMkdir not in flight; initializing
-63 verbose lock using /Users/flisshou/.npm/_locks/bindings-66c7095a8daa1617.lock for /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-64 silly install write writing bindings 1.2.1 to /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-65 verbose unbuild node_modules/bindings
-66 silly gentlyRm /Users/flisshou/Desktop/nodeaddon/node_modules/bindings is being purged from base /Users/flisshou/Desktop/nodeaddon
-67 verbose gentlyRm don't care about contents; nuking /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-68 verbose tar unpack /Users/flisshou/.npm/bindings/1.2.1/package.tgz
-69 verbose tar unpacking to /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-70 silly gentlyRm /Users/flisshou/Desktop/nodeaddon/node_modules/bindings is being purged
-71 verbose gentlyRm don't care about contents; nuking /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-72 silly gunzTarPerm modes [ '755', '644' ]
-73 silly gunzTarPerm extractEntry package.json
-74 silly gunzTarPerm extractEntry README.md
-75 silly gunzTarPerm extractEntry bindings.js
-76 verbose write writing to /Users/flisshou/Desktop/nodeaddon/node_modules/bindings/package.json
-77 info preinstall bindings@1.2.1
-78 verbose readDependencies loading dependencies from /Users/flisshou/Desktop/nodeaddon/node_modules/bindings/package.json
-79 verbose readDependencies loading dependencies from /Users/flisshou/Desktop/nodeaddon/node_modules/bindings/package.json
-80 silly install resolved []
-81 verbose about to build /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-82 info build /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-83 info linkStuff bindings@1.2.1
-84 silly linkStuff bindings@1.2.1 has /Users/flisshou/Desktop/nodeaddon/node_modules as its parent node_modules
-85 verbose linkBins bindings@1.2.1
-86 verbose linkMans bindings@1.2.1
-87 verbose rebuildBundles bindings@1.2.1
-88 info install bindings@1.2.1
-89 info postinstall bindings@1.2.1
-90 verbose unlock done using /Users/flisshou/.npm/_locks/bindings-66c7095a8daa1617.lock for /Users/flisshou/Desktop/nodeaddon/node_modules/bindings
-91 info build /Users/flisshou/Desktop/nodeaddon
-92 info linkStuff nodeaddon@1.0.0
-93 silly linkStuff nodeaddon@1.0.0 has /Users/flisshou/Desktop as its parent node_modules
-94 verbose linkBins nodeaddon@1.0.0
-95 verbose linkMans nodeaddon@1.0.0
-96 verbose rebuildBundles nodeaddon@1.0.0
-97 verbose rebuildBundles [ 'bindings', 'nan' ]
-98 verbose rebuild bundle /Users/flisshou/Desktop/nodeaddon/node_modules/nan
-99 info build /Users/flisshou/Desktop/nodeaddon/node_modules/nan
-100 info preinstall nan@2.4.0
-101 info linkStuff nan@2.4.0
-102 silly linkStuff nan@2.4.0 has /Users/flisshou/Desktop/nodeaddon/node_modules as its parent node_modules
-103 verbose linkBins nan@2.4.0
-104 verbose linkMans nan@2.4.0
-105 verbose rebuildBundles nan@2.4.0
-106 info install nan@2.4.0
-107 info postinstall nan@2.4.0
-108 info install nodeaddon@1.0.0
-109 verbose unsafe-perm in lifecycle true
-110 info nodeaddon@1.0.0 Failed to exec install script
-111 verbose stack Error: nodeaddon@1.0.0 install: `node-gyp rebuild`
-111 verbose stack Exit status 1
-111 verbose stack     at EventEmitter.<anonymous> (/opt/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
-111 verbose stack     at emitTwo (events.js:87:13)
-111 verbose stack     at EventEmitter.emit (events.js:172:7)
-111 verbose stack     at ChildProcess.<anonymous> (/opt/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-111 verbose stack     at emitTwo (events.js:87:13)
-111 verbose stack     at ChildProcess.emit (events.js:172:7)
-111 verbose stack     at maybeClose (internal/child_process.js:827:16)
-111 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-112 verbose pkgid nodeaddon@1.0.0
-113 verbose cwd /Users/flisshou/Desktop/nodeaddon
-114 error Darwin 14.5.0
-115 error argv "/opt/local/bin/node" "/opt/local/bin/npm" "install"
-116 error node v4.4.3
-117 error npm  v2.15.3
-118 error code ELIFECYCLE
-119 error nodeaddon@1.0.0 install: `node-gyp rebuild`
-119 error Exit status 1
-120 error Failed at the nodeaddon@1.0.0 install script 'node-gyp rebuild'.
-120 error This is most likely a problem with the nodeaddon package,
-120 error not with npm itself.
-120 error Tell the author that this fails on your system:
-120 error     node-gyp rebuild
-120 error You can get information on how to open an issue for this project with:
-120 error     npm bugs nodeaddon
-120 error Or if that isn't available, you can get their info via:
-120 error
-120 error     npm owner ls nodeaddon
-120 error There is likely additional logging output above.
-121 verbose exit [ 1, true ]
+10 verbose installManyTop reading scoped package data from /Users/flisshou/Desktop/nodeaddon/node_modules/bindings/package.json
+11 verbose installManyTop reading scoped package data from /Users/flisshou/Desktop/nodeaddon/node_modules/nan/package.json
+12 verbose readDependencies loading dependencies from /Users/flisshou/Desktop/nodeaddon/package.json
+13 verbose targetResolver reading package data from /Users/flisshou/Desktop/nodeaddon/node_modules/bindings/package.json
+14 verbose targetResolver reading package data from /Users/flisshou/Desktop/nodeaddon/node_modules/nan/package.json
+15 verbose already installed skipping bindings@~1.2.1 /Users/flisshou/Desktop/nodeaddon
+16 silly install resolved []
+17 info build /Users/flisshou/Desktop/nodeaddon
+18 info linkStuff nodeaddon@1.0.0
+19 silly linkStuff nodeaddon@1.0.0 has /Users/flisshou/Desktop as its parent node_modules
+20 verbose linkBins nodeaddon@1.0.0
+21 verbose linkMans nodeaddon@1.0.0
+22 verbose rebuildBundles nodeaddon@1.0.0
+23 verbose rebuildBundles [ 'bindings', 'nan' ]
+24 verbose rebuild bundle /Users/flisshou/Desktop/nodeaddon/node_modules/nan
+25 info build /Users/flisshou/Desktop/nodeaddon/node_modules/nan
+26 info preinstall nan@2.4.0
+27 info linkStuff nan@2.4.0
+28 silly linkStuff nan@2.4.0 has /Users/flisshou/Desktop/nodeaddon/node_modules as its parent node_modules
+29 verbose linkBins nan@2.4.0
+30 verbose linkMans nan@2.4.0
+31 verbose rebuildBundles nan@2.4.0
+32 info install nan@2.4.0
+33 info postinstall nan@2.4.0
+34 info install nodeaddon@1.0.0
+35 verbose unsafe-perm in lifecycle true
+36 info nodeaddon@1.0.0 Failed to exec install script
+37 verbose stack Error: nodeaddon@1.0.0 install: `node-gyp rebuild`
+37 verbose stack Exit status 1
+37 verbose stack     at EventEmitter.<anonymous> (/opt/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+37 verbose stack     at emitTwo (events.js:87:13)
+37 verbose stack     at EventEmitter.emit (events.js:172:7)
+37 verbose stack     at ChildProcess.<anonymous> (/opt/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+37 verbose stack     at emitTwo (events.js:87:13)
+37 verbose stack     at ChildProcess.emit (events.js:172:7)
+37 verbose stack     at maybeClose (internal/child_process.js:827:16)
+37 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+38 verbose pkgid nodeaddon@1.0.0
+39 verbose cwd /Users/flisshou/Desktop/nodeaddon
+40 error Darwin 14.5.0
+41 error argv "/opt/local/bin/node" "/opt/local/bin/npm" "install"
+42 error node v4.4.3
+43 error npm  v2.15.3
+44 error code ELIFECYCLE
+45 error nodeaddon@1.0.0 install: `node-gyp rebuild`
+45 error Exit status 1
+46 error Failed at the nodeaddon@1.0.0 install script 'node-gyp rebuild'.
+46 error This is most likely a problem with the nodeaddon package,
+46 error not with npm itself.
+46 error Tell the author that this fails on your system:
+46 error     node-gyp rebuild
+46 error You can get information on how to open an issue for this project with:
+46 error     npm bugs nodeaddon
+46 error Or if that isn't available, you can get their info via:
+46 error
+46 error     npm owner ls nodeaddon
+46 error There is likely additional logging output above.
+47 verbose exit [ 1, true ]

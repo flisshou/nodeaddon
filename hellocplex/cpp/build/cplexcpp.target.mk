@@ -33,7 +33,8 @@ CFLAGS_C_Debug := \
 
 # Flags passed to only C++ files.
 CFLAGS_CC_Debug := \
-	-std=gnu++0x \
+	-std=c++11 \
+	-stdlib=libstdc++ \
 	-fno-rtti \
 	-fno-threadsafe-statics \
 	-fno-strict-aliasing \
@@ -82,7 +83,8 @@ CFLAGS_C_Release := \
 
 # Flags passed to only C++ files.
 CFLAGS_CC_Release := \
-	-std=gnu++0x \
+	-std=c++11 \
+	-stdlib=libstdc++ \
 	-fno-rtti \
 	-fno-threadsafe-statics \
 	-fno-strict-aliasing \
@@ -137,7 +139,8 @@ LDFLAGS_Debug := \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.7 \
 	-arch x86_64 \
-	-L$(builddir)
+	-L$(builddir) \
+	-stdlib=libstdc++
 
 LIBTOOLFLAGS_Debug := \
 	-undefined dynamic_lookup \
@@ -148,7 +151,8 @@ LDFLAGS_Release := \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.7 \
 	-arch x86_64 \
-	-L$(builddir)
+	-L$(builddir) \
+	-stdlib=libstdc++
 
 LIBTOOLFLAGS_Release := \
 	-undefined dynamic_lookup \

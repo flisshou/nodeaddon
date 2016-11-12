@@ -1,0 +1,366 @@
+{
+  "managerShift" : {
+    "010" : {
+      "2016-10-16" : {
+        "00001" : {
+          "Cleaning" : [ [ "AA", "2016-10-17-6:00", "2016-10-17-12:00" ], [ "BB", "2016-10-17-6:00", "2016-10-17-13:00" ], [ "CC", "2016-10-17-9:00", "2016-10-17-14:00" ], [ "DD", "2016-10-17-6:00", "2016-10-17-18:00" ] ],
+          "Coding" : [ [ "QQ" ], [ "WW" ], [ "11" ] ],
+          "Dancing" : [ [ "GGG" ], [ "RRR" ] ],
+          "End Date" : "2016-10-17-12:00",
+          "Start Date" : "2016-10-17-0:00",
+          "Type" : "Morning"
+        }
+      },
+      "currentShift" : "2016-10-16"
+    }
+  },
+  "bulletin" : {
+    "-KVFoAvU7E8q5i59JQpA" : {
+      "content" : "",
+      "district" : "districtID100",
+      "employee" : "102306111",
+      "section" : 0,
+      "store" : "storeID010",
+      "time" : "Oct 29, 2016, 10:20 PM",
+      "title" : "111's store post"
+    },
+    "-KVFoF7OMLS5kaSpT7Nz" : {
+      "content" : "",
+      "district" : "districtID100",
+      "employee" : "102306111",
+      "section" : 1,
+      "store" : "storeID010",
+      "time" : "Oct 29, 2016, 10:21 PM",
+      "title" : "111's district post"
+    },
+    "-KVJpOSxIHQ1hqYstHld" : {
+      "content" : "",
+      "district" : "districtID100",
+      "employee" : "102306112",
+      "section" : 0,
+      "store" : "storeID010",
+      "time" : "Oct 30, 2016, 5:04 PM",
+      "title" : "112' store post edited"
+    },
+    "-KVJpTTrB0uJtmvcGNgx" : {
+      "content" : "",
+      "district" : "districtID100",
+      "employee" : "102306112",
+      "section" : 1,
+      "store" : "storeID010",
+      "time" : "Oct 30, 2016, 5:05 PM",
+      "title" : "112's district post"
+    }
+  },
+  "distance" : {
+    "storeID010" : {
+      "storeID020" : 5000,
+      "storeID030" : 6000,
+      "storeID040" : 10000
+    },
+    "storeID020" : {
+      "storeID010" : 5000,
+      "storeID030" : 7000,
+      "storeID040" : 9000
+    },
+    "storeID030" : {
+      "storeID010" : 6000,
+      "storeID020" : 7000,
+      "storeID040" : 2000
+    },
+    "storeID040" : {
+      "storeID010" : 10000,
+      "storeID020" : 9000,
+      "storeID030" : 2000
+    }
+  },
+  "district" : {
+    "districtID100" : {
+      "districtManager" : "102306111",
+      "name" : "文山區",
+      "stores" : {
+        "storeID010" : true,
+        "storeID020" : true
+      }
+    },
+    "districtID200" : {
+      "districtManager" : "102306222",
+      "name" : "公館區",
+      "stores" : {
+        "storeID030" : true,
+        "storeID040" : true
+      }
+    }
+  },
+  "employee" : {
+    "102306111" : {
+      "ID" : "102306111",
+      "district" : "districtID100",
+      "name" : "SS",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : 45000
+      },
+      "phone" : "0911111111",
+      "profession" : {
+        "cleaning" : true,
+        "coding" : true
+      },
+      "rank" : "storeManager",
+      "store" : "010"
+    },
+    "102306112" : {
+      "ID" : "102306112",
+      "district" : "districtID100",
+      "name" : "FW",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : {
+        "cleaning" : true,
+        "coding" : true
+      },
+      "rank" : "partTime",
+      "store" : "storeID010"
+    },
+    "102306221" : {
+      "ID" : "102306221",
+      "district" : "districtID100",
+      "name" : "FH",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : 45000
+      },
+      "phone" : "0911111111",
+      "profession" : {
+        "cleaning" : true,
+        "coding" : true
+      },
+      "rank" : "storeManager",
+      "store" : "storeID020"
+    },
+    "102306222" : {
+      "ID" : "102306222",
+      "district" : "districtID100",
+      "name" : "GY",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0922222222",
+      "profession" : {
+        "bartender" : true
+      },
+      "rank" : "partTime",
+      "store" : "storeID020"
+    }
+  },
+  "employeeEvent" : {
+    "010" : {
+      "2016-10-16" : {
+        "102306111" : {
+          "-KVdUkoyr4xKEU99Xw6i" : {
+            "End Date" : "2016-10-18-10:30",
+            "Preference" : 5,
+            "Start Date" : "2016-10-18-2:30"
+          },
+          "-KVoguNE6Cmb-OdAdCvi" : {
+            "End Date" : "2016-10-19-7:00",
+            "Preference" : 3,
+            "Start Date" : "2016-10-19-2:00"
+          },
+          "-KVogvnA8f8S5YxvYmBG" : {
+            "End Date" : "2016-10-17-8:00",
+            "Preference" : 3,
+            "Start Date" : "2016-10-17-3:00"
+          }
+        }
+      },
+      "currentEvent" : "2016-10-16",
+      "setEventSwitch" : true
+    },
+    "2016-10-16" : {
+      "102306111" : {
+        "-KVJx7tAbZKXNyjdntNH" : {
+          "End Date" : "2016-10-16-5:00",
+          "Start Date" : "2016-10-16-0:00"
+        }
+      }
+    }
+  },
+  "employeeShift" : {
+    "010" : {
+      "2016-10-16" : {
+        "102306111" : {
+          "001" : {
+            "End Date" : "2016-10-16-19:00",
+            "Start Date" : "2016-10-16-5:00"
+          }
+        }
+      },
+      "2016-10-30" : {
+        "102306111" : {
+          "002" : {
+            "End Date" : "2016-10-31-23:00",
+            "Start Date" : "2016-10-31-19:00"
+          },
+          "003" : {
+            "End Date" : "2016-11-01-13:00",
+            "Start Date" : "2016-11-01-5:00"
+          },
+          "004" : {
+            "End Date" : "2016-11-02-19:00",
+            "Start Date" : "2016-11-02-12:00"
+          },
+          "005" : {
+            "End Date" : "2016-11-03-15:00",
+            "Start Date" : "2016-11-03-6:00"
+          },
+          "006" : {
+            "End Date" : "2016-11-04-23:00",
+            "Start Date" : "2016-11-04-5:00",
+            "arrivalTime" : "2016-11-04-4:46"
+          },
+          "007" : {
+            "End Date" : "2016-11-05-19:00",
+            "Start Date" : "2016-11-05-13:00",
+            "arrivalTime" : "2016-11-05-18:28"
+          }
+        }
+      },
+      "currentShift" : "2016-10-30"
+    },
+    "020" : {
+      "2016-10-30" : {
+        "102306222" : {
+          "005" : {
+            "End Date" : "2016-11-03-20:00",
+            "Start Date" : "2016-11-03-13:00",
+            "arrivalTime" : "2016-11-03-13:00",
+            "departureTime" : "2016-11-03-20:00"
+          },
+          "006" : {
+            "End Date" : "2016-11-04-11:00",
+            "Start Date" : "2016-11-04_6:00"
+          }
+        }
+      },
+      "2016-11-06" : {
+        "102306221" : {
+          "002" : {
+            "End Date" : "2016-11-07-18:00",
+            "Start Date" : "2016-11-07-11:00",
+            "arrivalTime" : "2016-11-07-12:00",
+            "departureTime" : "2016-11-07-17:00"
+          },
+          "003" : {
+            "End Date" : "2016-11-08-22:00",
+            "Start Date" : "2016-11-08-14:00"
+          }
+        },
+        "102306222" : {
+          "001" : {
+            "End Date" : "2016-11-06-20:00",
+            "Start Date" : "2016-11-06-13:00",
+            "arrivalTime" : "2016-11-06-13:00",
+            "departureTime" : "2016-11-06-19:00"
+          },
+          "002" : {
+            "End Date" : "2016-11-07-20:00",
+            "Start Date" : "2016-11-07-13:00",
+            "arrivalTime" : "2016-11-07-14:00",
+            "departureTime" : "2016-11-07-20:00"
+          },
+          "003" : {
+            "End Date" : "2016-11-08-20:00",
+            "Start Date" : "2016-11-08-13:00"
+          }
+        }
+      },
+      "currentShift" : "2016-10-30"
+    }
+  },
+  "managerEvent" : {
+    "010" : {
+      "2016-10-05" : {
+        "-KVtXnMVgr3T89n8qOeP" : {
+          "Cleaning" : 0,
+          "Coding" : 2,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-06-16:00",
+          "StartDate" : "2016-10-06-9:00"
+        },
+        "-KVtXuhAlg9HGbm9wfCX" : {
+          "Cleaning" : 0,
+          "Coding" : 1,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-06-22:00",
+          "StartDate" : "2016-10-06-16:00"
+        },
+        "-KVtY0khjIQBNpta0G6x" : {
+          "Cleaning" : 0,
+          "Coding" : 2,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-07-16:00",
+          "StartDate" : "2016-10-07-9:00"
+        },
+        "-KVtY3wI9hTRLSTY4jdh" : {
+          "Cleaning" : 0,
+          "Coding" : 1,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-07-22:00",
+          "StartDate" : "2016-10-07-16:00"
+        }
+      },
+      "2018-1-29" : {
+        "-KVE1CesluXg1jlQtzgV" : {
+          "Cleaning" : 0,
+          "Coding" : 0,
+          "Dancing" : 0,
+          "EndDate" : "2018-1-30-7:00",
+          "StartDate" : "2018-1-30-0:00"
+        }
+      },
+      "currentEvent" : "2016-10-05",
+      "currentEventDeadline" : "2016-12-29",
+      "setEventSwitch" : true
+    }
+  },
+  "store" : {
+    "storeID010" : {
+      "address" : "北市文山區指南路",
+      "district" : "districtID001",
+      "location" : {
+        "latitude" : 12345678,
+        "longitude" : 87654321
+      },
+      "members" : {
+        "102306111" : true,
+        "102306112" : true
+      },
+      "name" : "政大店",
+      "transferable" : {
+        "storeId020" : true,
+        "storeId030" : true
+      }
+    },
+    "storeID020" : {
+      "address" : "台北市",
+      "district" : "districtID002",
+      "location" : {
+        "latitude" : 87654321,
+        "longitude" : 12345678
+      },
+      "members" : {
+        "102306221" : true,
+        "102306222" : true
+      },
+      "name" : "木新店",
+      "transferable" : {
+        "storeID030" : true
+      }
+    }
+  }
+}
