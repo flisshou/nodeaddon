@@ -11,6 +11,7 @@ public:
   void define_WeekBounds(int, int);
   void define_DayBounds(int, int);
   void define_TimeSections(int []);
+  void define_BaseAmount(int []);
   void define_Coefficient();
 
   int get_IJ();

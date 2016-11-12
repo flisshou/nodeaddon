@@ -18,50 +18,46 @@ var db = admin.database();
 //FIREBASE - References
 var managerEventRef  = db.ref('/managerEvent');
 var managerShiftRef  = db.ref('/managerShift');
-var employeeEvent    = db.ref('/employeeEvent');
+var employeeEventRef = db.ref('/employeeEvent');
 var employeeShiftRef = db.ref('/employeeShift');
 
 //DECLARATION - Arrays for being Parsed to V8 as CPLEX Constraints
 var StartTimeArray        = [];
 var EndTimeArray          = [];
-var SupervisorDemandArray = [];
-var WorkerDemandArray     = [];
+var CodingArray = [];
+var CleaningArray = [];
+var DancingArray = [];
 
-var tempStartTimeArray = [];
-var tempEndTimeArray = [];
-var tempCodingArray = [];
-var tempCleaningArray = [];
-var tempDancingArray = [];
-
-var tempData = {};
+var Data = {};
 var currentEvent = "";
 
-//FIREBASE - Query
+//Query Manager Event
 managerEventRef.child("010").on("value", function(date) {
   currentEvent = date.val().currentEvent;
   // console.log("currentEvent -> " + currentEvent);
+  if (currentEvent == "2016-10-05"){
+    managerEventRef.child("010").child("2016-10-05").orderByChild("StartDate").on("child_added", function (snapshot) {
+      var data = snapshot.val();
+      StartTimeArray.push(data.StartDate);
+      EndTimeArray.push(data.EndDate);
+      CodingArray.push(data.Coding);
+      CleaningArray.push(data.Cleaning);
+      DancingArray.push(data.Dancing);
 
-  managerEventRef.child("010").child("2016-10-05").orderByChild("StartDate").on("child_added", function(snapshot){
-    if (currentEvent == "2016-10-05") {
-        var data = snapshot.val();
-        tempStartTimeArray.push(data.StartDate);
-        tempEndTimeArray.push(data.EndDate);
-        tempCodingArray.push(data.Coding);
-        tempCleaningArray.push(data.Cleaning);
-        tempDancingArray.push(data.Dancing);
+      Data = {StartTimeArray, EndTimeArray, CleaningArray, DancingArray, CodingArray};
+    });
 
-        tempData = {tempStartTimeArray, tempEndTimeArray, tempCleaningArray, tempDancingArray, tempCodingArray};
-    } else {
-      console.log("Not yet...");
-    }
-  });
-  var retTimeSection = cplexcpp.define_time_sections(dateHourToInt(tempEndTimeArray, tempStartTimeArray));
-  console.log("retTimeSection :: " + retTimeSection);
+    var retTimeSection = cplexcpp.define_time_sections(dateHourToInt(EndTimeArray, StartTimeArray));
+    var retBaseAmount  = cplexcpp.define_base_amount(CodingArray);
+    console.log("retTimeSection :: " + retTimeSection);
+    console.log("retBaseAmount  :: " + retBaseAmount);
+  } else {
+    console.log("Not yet...");
+  }
 });
 
-
-
 //QUERY EmployeeEvent DATA
+
 
 //SEND DATA TO V8
 
@@ -95,7 +91,7 @@ console.log("retWeekBounds  :: " + retWeekBounds);
 
 /* GET /api/v1/mimic.*/
 router.get('/mimic', function(req, res) {
-  res.send(tempData);
+  res.send(Data);
 });
 
 // /* POST /api/v1/testdata/users/cplex_managers_parameters*/

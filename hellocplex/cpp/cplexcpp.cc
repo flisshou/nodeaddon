@@ -6,6 +6,7 @@ IloIntArray objScalars;
 IloInt IndiceI, IndiceJ, IndiceK;
 IloInt Dmin, Dmax, Wmin, Wmax;
 int Tjk[] = {0, 0, 0, 0};
+int Bjk[] = {0, 0, 0, 0};
 
 void CplexCpp :: runCplex() {
   cout << "CplexCpp is running..." << endl;
@@ -77,18 +78,32 @@ void CplexCpp :: define_Coefficient () {
 
 }
 
-void CplexCpp :: define_TimeSections(int array []) {
+void CplexCpp :: define_TimeSections(int timeArray []) {
     cout << "[ T11 T21 T12 T22 ] = [ ";
     int length = get_JK();
     
     for (int i = 0; i < length; i++) {
         
-        Tjk[i] = array[i];
+        Tjk[i] = timeArray[i];
         
-        cout << array[i] << " ";
+        cout << timeArray[i] << " ";
     }
     
     cout << "]" << endl;
+}
+
+void CplexCpp :: define_BaseAmount(int baseArray []) {
+    cout << "[ B11 B21 B12 B22 ] = [ " ;
+    int length = get_JK();
+    
+    for (int i = 0; i < length; i++) {
+        Bjk[i] = baseArray[i];
+        
+        cout << baseArray[i] << " ";
+    }
+    
+    cout << "]" << endl;
+    
 }
 
 int CplexCpp :: get_IJ() {
