@@ -87,7 +87,6 @@ void DefineWeekBounds (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(msg);
 }
 
-
 void UnwrapAvailability (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
     CplexCpp cpp;
@@ -157,6 +156,16 @@ void GetIK (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(retValue);
 }
 
+void RunCPLEX (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    
+    cpp.runCplex();
+    
+    Local<String> msg = String :: NewFromUtf8(isolate, "Invoking the CPLEX CPP......");
+    args.GetReturnValue().Set(msg);
+}
+
 void Init (Handle <Object> exports, Handle<Object> module) {
     NODE_SET_METHOD(exports, "define_data_size",     DefineDataSize);
     NODE_SET_METHOD(exports, "define_day_bounds",    DefineDayBounds);
@@ -168,6 +177,7 @@ void Init (Handle <Object> exports, Handle<Object> module) {
     NODE_SET_METHOD(exports, "get_IJ", GetIJ);
     NODE_SET_METHOD(exports, "get_JK", GetJK);
     NODE_SET_METHOD(exports, "get_IK", GetIK);
+    NODE_SET_METHOD(exports, "run_cplex", RunCPLEX);
 }
 
 NODE_MODULE(cplexcpp, Init)

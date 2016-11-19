@@ -115,6 +115,9 @@ employeeEventRef.child("010").on("value", function(date) {
   } else {
     console.log("Not yet...");
   }
+
+  var retRunCPLEX = cplexcpp.run_cplex();
+  console.log("retRunCPLEX :: " + retRunCPLEX);
 });
 
 

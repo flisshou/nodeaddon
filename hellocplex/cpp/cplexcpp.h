@@ -14,7 +14,7 @@ public:
 
   void define_TimeSections(int []);
   void define_BaseAmount(int []);
-  void define_Coefficient();
+  void define_Coefficient(IloEnv);
 
   int get_IJ();
   int get_JK();

@@ -5,6 +5,8 @@ using namespace std;
 IloIntArray objScalars;
 IloInt IndiceI, IndiceJ, IndiceK;//4 2 2
 IloInt Dmin, Dmax, Wmin, Wmax;
+IloInt lowerBound = 0;
+IloInt upperBound = 1;
 int Tjk[] = {0, 0, 0, 0};
 int Bjk[] = {0, 0, 0, 0};
 vector<int> Aijk;
@@ -22,14 +24,16 @@ void CplexCpp :: runCplex() {
     IloObjective obj;
     IloNumVarArray var(env);
     IloRangeArray rng(env);
-
+      
+    define_Coefficient(env);
     populate(model, var, rng);
+    
 
     cplex.extract(model);
 
     if (cplex.solve()) {
-      env.out() << "Solution Status ::" << cplex.getStatus()   << endl;
-      env.out() << "Solution Value  ::" << cplex.getObjValue() << endl;
+      env.out() << "Solution Status :: " << cplex.getStatus()   << endl;
+      env.out() << "Solution Value  :: " << cplex.getObjValue() << endl;
 
       IloNumArray values(env);
 
@@ -76,15 +80,6 @@ void CplexCpp :: define_DayBounds (int min, int max) {
     cout << "[ Dmin Dmax ] = [ " << Dmin << " " << Dmax << " ]" << endl;
 }
 
-void CplexCpp :: define_Coefficient () {
-    //(Pijk * Aijk) + (Aijk - 1)
-
-    //Undone....
-    
-    //Undone....
-    
-}
-
 void CplexCpp :: define_TimeSections (int timeArray []) {
     cout << "[ T11 T21 T12 T22 ] = [ ";
     int length = get_JK();
@@ -113,12 +108,17 @@ void CplexCpp :: define_BaseAmount (int baseArray []) {
     
 }
 
+void CplexCpp :: define_Coefficient (IloEnv env) {
+    //(Pijk * Aijk) + (Aijk - 1)
+    IloInt length = Aijk.size();
+    IloIntArray objScalars(env);
 
-
-void CplexCpp :: populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
+    for (IloInt i = 0 ; i < length; i++) {
+        objScalars.add((Aijk[i]*Pijk[i]) + (Aijk[i] - 1));
+    }
     
+    env.out() << "IloCPLEX scalars are " << objScalars << endl;
 }
-
 
 int CplexCpp :: get_IJ () {
     return IndiceI * IndiceJ;
@@ -131,6 +131,8 @@ int CplexCpp :: get_JK () {
 int CplexCpp :: get_IK () {
     return IndiceI * IndiceK;
 }
+
+
 
 
 //=======================EMPLOYEE EVENT========================
@@ -268,18 +270,90 @@ int Employee :: get_IJK () {
     return IndiceI * IndiceJ * IndiceK;
 }
 
-//void Employee :: unwrap_Preference(int preference[]) {
-//    
-//}
 
 
 
+//==========================MODEL==============================
 
 
-
-
-
-
+void CplexCpp :: populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
+    IloEnv env = model.getEnv();
+    Employee emp;
+    IloInt varNumber = emp.get_IJK();
+    IloInt JK = get_JK();
+    
+    env.out() << "It's trying to populate the result......." << endl;
+    
+    Yijk = IloNumVarArray(env, varNumber, lowerBound, upperBound, ILOINT);
+    IloNumVarArray Xik = IloNumVarArray(env, varNumber/2, lowerBound, upperBound, ILOINT);
+//    env.out() << "Built Decision Variables....." << endl;
+    
+    //Objective Function
+    model.add(IloMaximize(env, IloScalProd(objScalars, Yijk)));
+    env.out() << "Built Objective Function....." << endl;//Stuck here 2016-11-19
+    
+    //Constraint 1-1:
+    IloExpr expr1(env);
+    for (IloInt i = 0; i < varNumber; i += JK) {
+        expr1.setLinearCoef(Yijk[i], 1);
+    }
+    IloRange rng1 = IloRange(env, Bjk[0], expr1, Bjk[0]);
+    rng.IloExtractableArray::add(rng1);
+    expr1.end();
+    
+    //Constraint 1-2:
+    IloExpr expr2(env);
+    for (IloInt i = 1; i < varNumber; i += 4) {
+        expr2.setLinearCoef(Yijk[i], 1);
+    }
+    IloRange rng2 = IloRange(env, Bjk[1], expr2, Bjk[1]);
+    rng.IloExtractableArray::add(rng2);
+    expr2.end();
+    
+    //Constraint 1-3:
+    IloExpr expr3(env);
+    for (IloInt i = 2; i < varNumber; i += 4) {
+        expr3.setLinearCoef(Yijk[i], 1);
+    }
+    IloRange rng3 = IloRange(env, Bjk[2], expr3, Bjk[2]);
+    rng.IloExtractableArray::add(rng3);
+    expr3.end();
+    
+    //Constraint 1-4:
+    IloExpr expr4(env);
+    for (IloInt i = 3; i < varNumber; i += 4) {
+        expr4.setLinearCoef(Yijk[i], 1);
+    }
+    IloRange rng4 = IloRange(env, Bjk[3], expr4, Bjk[3]);
+    rng.IloExtractableArray::add(rng4);
+    expr4.end();
+    
+    //Constraint 2:
+    for (IloInt i = 0; i < varNumber; i += IndiceJ) {
+        IloInt TjkIndex = i % 4;
+//        IloInt min = Dmin * Xik[i/2];
+        rng.add(IloRange(env, Dmin, Tjk[TjkIndex] * Yijk[i] + Tjk[TjkIndex+1]* Yijk[i+1], Dmax));
+    }
+    
+    //Constrain 3:
+    for (IloInt i = 0; i < varNumber; i += JK) {
+        rng.add(IloRange(env, Wmin, Tjk[0] * Yijk[i] + Tjk[1] * Yijk[i+1] + Tjk[2] * Yijk[i+2] + Tjk[3] * Yijk[i+3], Wmax));
+    }
+    
+    //Merge Constraints into CPLEX Extractable Model
+    model.add(rng);
+    
+    //Constraint 4:
+    IloAnd cons1(env);
+    for (IloInt i = 0; i < varNumber; i += IndiceK) {
+        cons1.add(Yijk[i]   <= Xik[i/2]);
+        cons1.add(Yijk[i+1] <= Xik[i/2]);
+        model.add(cons1);
+    }
+    
+    env.out() << "THE MODEL:      " << endl << model << endl;
+    env.out() << "THE cons1:      " << endl << cons1 << endl;
+}
 
 
 
