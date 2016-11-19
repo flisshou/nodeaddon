@@ -1,19 +1,4 @@
 {
-  "managerShift" : {
-    "010" : {
-      "2016-10-16" : {
-        "00001" : {
-          "Cleaning" : [ [ "AA", "2016-10-17-6:00", "2016-10-17-12:00" ], [ "BB", "2016-10-17-6:00", "2016-10-17-13:00" ], [ "CC", "2016-10-17-9:00", "2016-10-17-14:00" ], [ "DD", "2016-10-17-6:00", "2016-10-17-18:00" ] ],
-          "Coding" : [ [ "QQ" ], [ "WW" ], [ "11" ] ],
-          "Dancing" : [ [ "GGG" ], [ "RRR" ] ],
-          "End Date" : "2016-10-17-12:00",
-          "Start Date" : "2016-10-17-0:00",
-          "Type" : "Morning"
-        }
-      },
-      "currentShift" : "2016-10-16"
-    }
-  },
   "bulletin" : {
     "-KVFoAvU7E8q5i59JQpA" : {
       "content" : "",
@@ -131,7 +116,7 @@
       "name" : "FH",
       "password" : "0000",
       "payment" : {
-        "monthly" : 45000
+        "monthly" : "45000"
       },
       "phone" : "0911111111",
       "profession" : {
@@ -162,32 +147,55 @@
       "2016-10-16" : {
         "102306111" : {
           "-KVdUkoyr4xKEU99Xw6i" : {
-            "End Date" : "2016-10-18-10:30",
+            "EndDate" : "2016-10-18-22:00",
             "Preference" : 5,
-            "Start Date" : "2016-10-18-2:30"
-          },
-          "-KVoguNE6Cmb-OdAdCvi" : {
-            "End Date" : "2016-10-19-7:00",
-            "Preference" : 3,
-            "Start Date" : "2016-10-19-2:00"
+            "StartDate" : "2016-10-18-09:00"
           },
           "-KVogvnA8f8S5YxvYmBG" : {
-            "End Date" : "2016-10-17-8:00",
+            "EndDate" : "2016-10-17-22:00",
             "Preference" : 3,
-            "Start Date" : "2016-10-17-3:00"
+            "StartDate" : "2016-10-17-09:00"
+          }
+        },
+        "102306222" : {
+          "00001" : {
+            "EndDate" : "2016-10-17-16:00",
+            "Preference" : 5,
+            "StartDate" : "2016-10-17-09:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-10-18-16:00",
+            "Preference" : 5,
+            "StartDate" : "2016-10-18-09:00"
+          }
+        },
+        "102306333" : {
+          "00001" : {
+            "EndDate" : "2016-10-17-22:00",
+            "Preference" : 4,
+            "StartDate" : "2016-10-17-09:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-10-18-22:00",
+            "Preference" : 5,
+            "StartDate" : "2016-10-18-16:00"
+          }
+        },
+        "102306444" : {
+          "00001" : {
+            "EndDate" : "2016-10-17-22:00",
+            "Preference" : 3,
+            "StartDate" : "2016-10-17-16:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-10-18-22:00",
+            "Preference" : 5,
+            "StartDate" : "2016-10-18-16:00"
           }
         }
       },
       "currentEvent" : "2016-10-16",
       "setEventSwitch" : true
-    },
-    "2016-10-16" : {
-      "102306111" : {
-        "-KVJx7tAbZKXNyjdntNH" : {
-          "End Date" : "2016-10-16-5:00",
-          "Start Date" : "2016-10-16-0:00"
-        }
-      }
     }
   },
   "employeeShift" : {
@@ -227,6 +235,18 @@
             "End Date" : "2016-11-05-19:00",
             "Start Date" : "2016-11-05-13:00",
             "arrivalTime" : "2016-11-05-18:28"
+          }
+        }
+      },
+      "2016-11-06" : {
+        "102306111" : {
+          "006" : {
+            "End Date" : "2016-11-11-5:00",
+            "Start Date" : "2016-11-11-4:00",
+            "arrivalTime" : "2016-11-11-4:39",
+            "departureTime" : "2016-11-11-4:41",
+            "late" : "2357",
+            "leaveEarly" : "1090"
           }
         }
       },
@@ -288,9 +308,9 @@
         "-KVtXnMVgr3T89n8qOeP" : {
           "Cleaning" : 0,
           "Coding" : 2,
-          "Dancing" : 0,
+          "Dancing" : 2567,
           "EndDate" : "2016-10-06-16:00",
-          "StartDate" : "2016-10-06-9:00"
+          "StartDate" : "2016-10-06-09:00"
         },
         "-KVtXuhAlg9HGbm9wfCX" : {
           "Cleaning" : 0,
@@ -304,7 +324,7 @@
           "Coding" : 2,
           "Dancing" : 0,
           "EndDate" : "2016-10-07-16:00",
-          "StartDate" : "2016-10-07-9:00"
+          "StartDate" : "2016-10-07-09:00"
         },
         "-KVtY3wI9hTRLSTY4jdh" : {
           "Cleaning" : 0,
@@ -314,23 +334,76 @@
           "StartDate" : "2016-10-07-16:00"
         }
       },
+      "2016-2-11" : {
+        "-KWI5sXAmmo91iRdDiE_" : {
+          "Cleaning" : 0,
+          "Coding" : 0,
+          "Dancing" : 0,
+          "EndDate" : "2016-2-13-06:00",
+          "StartDate" : "2016-2-13-00:00"
+        }
+      },
       "2018-1-29" : {
         "-KVE1CesluXg1jlQtzgV" : {
           "Cleaning" : 0,
           "Coding" : 0,
           "Dancing" : 0,
-          "EndDate" : "2018-1-30-7:00",
-          "StartDate" : "2018-1-30-0:00"
+          "EndDate" : "2018-1-30-07:00",
+          "StartDate" : "2018-1-30-00:00"
         }
       },
       "currentEvent" : "2016-10-05",
-      "currentEventDeadline" : "2016-12-29",
+      "currentEventDeadline" : "2017-2-09",
+      "isSchedulingSwitch" : false,
       "setEventSwitch" : true
     }
   },
+  "managerShift" : {
+    "010" : {
+      "2016-10-16" : {
+        "A01AASSDDFFGG" : {
+          "Cleaning" : [ {
+            "EndDate" : "2016-10-17-12:00",
+            "Name" : "How",
+            "StartDate" : "2016-10-17-0:00"
+          }, {
+            "EndDate" : "2016-10-17-9:00",
+            "Name" : "QQ",
+            "StartDate" : "2016-10-17-3:00"
+          } ],
+          "Coding" : [ {
+            "EndDate" : "2016-10-17-12:00",
+            "Name" : "Frank",
+            "StartDate" : "2016-10-17-0:00"
+          }, {
+            "EndDate" : "2016-10-17-9:00",
+            "Name" : "Fliss",
+            "StartDate" : "2016-10-17-2:00"
+          } ],
+          "Dancing" : [ {
+            "EndDate" : "2016-10-17-12:00",
+            "Name" : "Siang",
+            "StartDate" : "2016-10-17-0:00"
+          }, {
+            "EndDate" : "2016-10-17-9:00",
+            "Name" : "Fliss",
+            "StartDate" : "2016-10-17-3:00"
+          } ],
+          "End Date" : "2016-10-17-12:00",
+          "Start Date" : "2016-10-17-0:00",
+          "Type" : "Morning"
+        }
+      },
+      "currentShift" : "2016-10-16"
+    }
+  },
   "store" : {
-    "storeID010" : {
+    "010" : {
       "address" : "北市文山區指南路",
+      "distance" : {
+        "020" : "5",
+        "030" : "10"
+      },
       "district" : "districtID001",
       "location" : {
         "latitude" : 12345678,
@@ -342,12 +415,17 @@
       },
       "name" : "政大店",
       "transferable" : {
-        "storeId020" : true,
-        "storeId030" : true
+        "020" : true,
+        "030" : true
       }
     },
-    "storeID020" : {
+    "020" : {
       "address" : "台北市",
+      "distance" : {
+        "020" : "5",
+        "030" : "15",
+        "040" : "20"
+      },
       "district" : "districtID002",
       "location" : {
         "latitude" : 87654321,
@@ -359,7 +437,9 @@
       },
       "name" : "木新店",
       "transferable" : {
-        "storeID030" : true
+        "020" : true,
+        "030" : true,
+        "040" : true
       }
     }
   }

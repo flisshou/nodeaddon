@@ -87,12 +87,65 @@ void DefineWeekBounds (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(msg);
 }
 
+
+void PrintDuration (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    Employee emp;
+    
+    Local<Array> inputArray = Local<Array> :: Cast(args[0]);
+    
+    int outputLength = cpp.get_IK();
+    int outputArray[outputLength];
+    
+    for (int i = 0; i < outputLength; i++) {
+        outputArray[i] = inputArray->Get(i)->Int32Value();
+    }
+    
+    emp.print_Duration(outputArray);
+    emp.unwrap_Availability(outputArray);
+    
+    Local<String> msg = String :: NewFromUtf8(isolate, "Received Durations");
+    args.GetReturnValue().Set(msg);
+}
+
+void GetIJ (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    
+    Local<Number> retValue = Int32 :: New(isolate, cpp.get_IJ());
+    
+    args.GetReturnValue().Set(retValue);
+}
+
+void GetJK (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    
+    Local<Number> retValue = Int32 :: New(isolate, cpp.get_JK());
+    
+    args.GetReturnValue().Set(retValue);
+}
+
+void GetIK (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    
+    Local<Number> retValue = Int32 :: New(isolate, cpp.get_IK());
+    
+    args.GetReturnValue().Set(retValue);
+}
+
 void Init (Handle <Object> exports, Handle<Object> module) {
     NODE_SET_METHOD(exports, "define_data_size",     DefineDataSize);
     NODE_SET_METHOD(exports, "define_day_bounds",    DefineDayBounds);
     NODE_SET_METHOD(exports, "define_week_bounds",   DefineWeekBounds);
     NODE_SET_METHOD(exports, "define_time_sections", DefineTimeSections);
     NODE_SET_METHOD(exports, "define_base_amount",   DefineBaseAmount);
+    NODE_SET_METHOD(exports, "print_duration",       PrintDuration);
+    NODE_SET_METHOD(exports, "get_IJ", GetIJ);
+    NODE_SET_METHOD(exports, "get_JK", GetJK);
+    NODE_SET_METHOD(exports, "get_IK", GetIK);
 }
 
 NODE_MODULE(cplexcpp, Init)
