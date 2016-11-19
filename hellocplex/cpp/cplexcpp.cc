@@ -7,6 +7,8 @@ IloInt IndiceI, IndiceJ, IndiceK;//4 2 2
 IloInt Dmin, Dmax, Wmin, Wmax;
 int Tjk[] = {0, 0, 0, 0};
 int Bjk[] = {0, 0, 0, 0};
+vector<int> Aijk;
+vector<int> Pijk;
 
 
 void CplexCpp :: runCplex() {
@@ -77,6 +79,10 @@ void CplexCpp :: define_DayBounds (int min, int max) {
 void CplexCpp :: define_Coefficient () {
     //(Pijk * Aijk) + (Aijk - 1)
 
+    //Undone....
+    
+    //Undone....
+    
 }
 
 void CplexCpp :: define_TimeSections (int timeArray []) {
@@ -107,6 +113,13 @@ void CplexCpp :: define_BaseAmount (int baseArray []) {
     
 }
 
+
+
+void CplexCpp :: populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
+    
+}
+
+
 int CplexCpp :: get_IJ () {
     return IndiceI * IndiceJ;
 }
@@ -120,9 +133,7 @@ int CplexCpp :: get_IK () {
 }
 
 
-
 //=======================EMPLOYEE EVENT========================
-
 
 
 void Employee :: unwrap_Availability(int inputArray []) {
@@ -133,43 +144,94 @@ void Employee :: unwrap_Availability(int inputArray []) {
 
     int inputLength  = cpp.get_IK();
     int outputLength = get_IJK();
-    int outputArray[outputLength];
     
-    int JK = cpp.get_JK();
+    Aijk.resize(outputLength);
     
     for (int i = 0; i < inputLength; i++) {
         
-        int outputIndex = IndiceJ * i;
+        int JK = cpp.get_JK();
         int TjkIndex = (IndiceJ * i) % JK;
+        int outputIndex = IndiceJ * i;
         
         if (inputArray[i] == Tjk[TjkIndex]) {
-            
-            outputArray[outputIndex]     = 1;
-            outputArray[outputIndex + 1] = 0;
-            
+            Aijk[outputIndex] = 1;
         } else if (inputArray[i] == Tjk[TjkIndex + 1]) {
-            
-            outputArray[outputIndex]     = 0;
-            outputArray[outputIndex + 1] = 1;
-            
+            Aijk[outputIndex + 1] = 1;
         } else if (inputArray[i] == Tjk[TjkIndex] + Tjk[TjkIndex + 1]) {
-            
-            outputArray[outputIndex]     = 1;
-            outputArray[outputIndex + 1] = 1;
-            
+            Aijk[outputIndex] = 1;
+            Aijk[outputIndex + 1] = 1;
         } else {
-            cout << "Error..." << endl;
-            cout << "Returning..." << endl;
+            cout << "Something is wrong..." << endl;
+            cout << "Returning....." << endl;
             return;
         }
     }
     
-    cout << "[ A111 A121 A112 A122 A211 A221 A212 A222 A311 A321 A312 A322 A411 A421 A412 A422] = [ " ;
+    cout << "Aijk = < ";
     for (int i = 0; i < outputLength; i++) {
-        cout << outputArray[i] << " " ;
+        cout << Aijk[i] << " ";
     }
-    cout << "]" << endl;
+    cout << ">" << endl;
+//    int outputArray[outputLength];
+    //    for (int i = 0; i < inputLength; i++) {
+    //
+    //        int outputIndex = IndiceJ * i;
+    //        int TjkIndex = (IndiceJ * i) % JK;
+    //
+    //        if (inputArray[i] == Tjk[TjkIndex]) {
+    //
+    //            outputArray[outputIndex]     = 1;
+    //            outputArray[outputIndex + 1] = 0;
+    //
+    //        } else if (inputArray[i] == Tjk[TjkIndex + 1]) {
+    //
+    //            outputArray[outputIndex]     = 0;
+    //            outputArray[outputIndex + 1] = 1;
+    //
+    //        } else if (inputArray[i] == Tjk[TjkIndex] + Tjk[TjkIndex + 1]) {
+    //
+    //            outputArray[outputIndex]     = 1;
+    //            outputArray[outputIndex + 1] = 1;
+    //
+    //        } else {
+    //            cout << "Error..." << endl;
+    //            cout << "Returning..." << endl;
+    //            return;
+    //        }
+    //    }}
+}
+
+void Employee :: unwrap_Preference(int inputArray []) {
+    CplexCpp cpp;
     
+    int inputLength  = cpp.get_IK();
+    int outputLength = get_IJK();
+    
+    Pijk.resize(outputLength);
+    
+    for (int i = 0; i < inputLength; i++) {
+        
+        int APIndex = 2 * i;
+        
+        if (Aijk[APIndex] && Aijk[APIndex + 1]) {
+            Pijk[APIndex] = inputArray[i];
+            Pijk[APIndex + 1] = inputArray[i];
+        } else if (Aijk[APIndex] && Aijk[APIndex + 1] == 0) {
+            Pijk[APIndex] = inputArray[i];
+        } else if (Aijk[APIndex] == 0 && Aijk[APIndex + 1]) {
+            Pijk[APIndex + 1] = inputArray[i];
+        } else {
+            cout << "Wrong Pairing for Aijk and Pijk..." << endl;
+            cout << "Returning....." << endl;
+            return;
+        }
+    }
+    
+    cout << "Pijk = < " ;
+    for (int i = 0; i < outputLength; i++) {
+        cout << Pijk[i] << " ";
+    }
+    cout << ">" << endl;
 }
 
 void Employee :: print_Duration (int durationArray []) {
@@ -187,6 +249,20 @@ void Employee :: print_Duration (int durationArray []) {
     cout << "]" << endl;
 }
 
+void Employee :: print_Preference(int preferenceArray []) {
+    
+    CplexCpp cpp;
+    
+    cout << "[ Pik ]--------" << endl;
+    cout << "[ P11 P12 P21 P22 P31 P32 P41 P42 ] = [ ";
+    int length = cpp.get_IK();
+    
+    for (int i = 0; i < length; i++) {
+        cout << preferenceArray[i] << " ";
+    }
+    
+    cout << "]" << endl;
+}
 
 int Employee :: get_IJK () {
     return IndiceI * IndiceJ * IndiceK;

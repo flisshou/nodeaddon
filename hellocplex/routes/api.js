@@ -99,10 +99,14 @@ employeeEventRef.child("010").on("value", function(date) {
     });
 
     var durationArray = dateHourToInt(EmpEndTimeArray, EmpStartTimeArray);
-    console.log("durationArray -> " + durationArray);
+    // console.log("durationArray -> " + durationArray);
 
-    var retPrintDuration = cplexcpp.print_duration(durationArray);
-    console.log("retPrintDuration :: " + retPrintDuration);
+    var retPrintDuration = cplexcpp.unwrap_availability(durationArray);
+    console.log("retPrintDuration   :: " + retPrintDuration);
+
+    console.log("EmpPreferenceArray -> " + EmpPreferenceArray);
+    var retPrintPreference = cplexcpp.unwrap_preference(EmpPreferenceArray);
+    console.log("retPrintPreference :: " + retPrintPreference);
 
     // console.log("EmpStartTimeArray  -> " + EmpStartTimeArray);
     // console.log("EmpEndTimeArray    -> " + EmpEndTimeArray);

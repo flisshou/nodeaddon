@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <ilcplex/ilocplex.h>
 ILOSTLBEGIN
 
@@ -19,9 +20,6 @@ public:
   int get_JK();
   int get_IK();
 
-
-
-
   void runCplex();
   void populate(IloModel, IloNumVarArray, IloRangeArray);
 };
@@ -34,5 +32,7 @@ public:
 
   int get_IJK();
 
+
   void print_Duration(int []);
+  void print_Preference(int []);
 };
