@@ -14,14 +14,14 @@ public:
 
   void define_TimeSections(int []);
   void define_BaseAmount(int []);
-  void define_Coefficient(IloEnv);
+  IloIntArray define_Coefficient(IloEnv);
 
   int get_IJ();
   int get_JK();
   int get_IK();
 
   void runCplex();
-  void populate(IloModel, IloNumVarArray, IloRangeArray);
+  void populate(IloModel, IloIntVarArray, IloRangeArray);
 };
 
 class Employee {

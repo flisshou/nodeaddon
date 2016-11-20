@@ -9,8 +9,8 @@ var cplexcpp = require('/Users/flisshou/Desktop/nodeaddon/hellocplex/cpp/build/R
 
 /*                    CPLEX SETUP                    */
 var retDataSize    = cplexcpp.define_data_size(4, 2, 2);
-var retDayBounds   = cplexcpp.define_day_bounds(0, 6);
-var retWeekBounds  = cplexcpp.define_week_bounds(7, 13);
+var retDayBounds   = cplexcpp.define_day_bounds(0, 7);
+var retWeekBounds  = cplexcpp.define_week_bounds(6, 13);
 
 var sizeIJ = cplexcpp.get_IJ();
 var sizeJK = cplexcpp.get_JK();
