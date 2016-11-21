@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 IloInt IndiceI, IndiceJ, IndiceK;//4 2 2
 IloInt Dmin, Dmax, Wmin, Wmax;
 IloInt lowerBound = 0;
@@ -10,70 +11,47 @@ int Tjk[] = {0, 0, 0, 0};
 int Bjk[] = {0, 0, 0, 0};
 vector<int> Aijk;
 vector<int> Pijk;
+static void populate(IloModel, IloNumVarArray, IloRangeArray);
+static void solveSchedule(IloCplex, IloNumVarArray, IloRangeArray);
+
 
 
 
 void CplexCpp :: runCplex() {
-  cout << "CplexCpp is running..." << endl;
-  IloEnv env;
-
-  try {
-    IloModel model(env);
-    IloCplex cplex(env);
-
-    IloObjective obj;
-    IloIntVarArray var(env);
-    IloRangeArray rng(env);
-      
-//    objScalars = define_Coefficient(env);//Should fix this stupidness some time
-    populate(model, var, rng);
-
-    cplex.extract(model);
-    cplex.exportModel("nodecpp.lp");
-      
-      
-    if (cplex.solve()) {
+    cout << "CplexCpp is running..." << endl;
+    IloEnv env;
+    Employee emp;
+    
+    try {
         
-        env.out() << "Solution Status :: " << cplex.getStatus()   << endl;
-        env.out() << "Solution Value  :: " << cplex.getObjValue() << endl;
+        IloModel model(env);
+        
+        IloObjective obj;
+        IloNumVarArray var(env);
+        IloRangeArray rng(env);
+        
+        IloInt varNumber = emp.get_IJK();
+        IloIntArray objScalars = define_Coefficient(env);
+        var = IloNumVarArray(env, varNumber, lowerBound, upperBound, ILOINT);
+        model.add(IloMaximize(env, IloScalProd(objScalars, var)));
         
         
+        populate(model, var, rng);
         
-        //      cplex.getValues(values, var);
+        IloCplex cplex(model);
+        cplex.extract(model);
         
-        IloNumArray values(env);
-        IloSolution solutions(env);
+        solveSchedule(cplex, var, rng);
         
-        solutions.add(var);
+        model.end();
         
-        cout << "Solutions         = [ ";
-        for (IloInt i = 0; i < 16; i++) {
-            cout << solutions.getValue(var[i]) << " ";
-        }
-        cout << "]" << endl << endl;
-        
-        cplex.getValues(var, values);
-        env.out() << "Values        = " << values << endl;
-        
-        cplex.getSlacks(values, rng);
-        env.out() << "Slacks        = " << values << endl;
-        
-        cplex.getDuals(values, rng);
-        env.out() << "Duals         = " << values << endl;
-        
-        cplex.getReducedCosts(values, var);
-        env.out() << "Reduced Costs = " << values << endl;
+    } catch (IloException& e) {
+        cerr << "Concert Exception Caught: " << e << endl;
+    } catch (...) {
+        cerr << "Unknown Exception Caught: " << endl;
     }
-
-    model.end();
-      
-  } catch (IloException& e) {
-    cerr << "Concert Exception Caught: " << e << endl;
-  } catch (...) {
-    cerr << "Unknown Exception Caught: " << endl;
-  }
-
-  env.end();
+    
+    env.end();
 }
 
 void CplexCpp :: define_DataSize (int workers, int shifts, int days) {
@@ -126,19 +104,6 @@ void CplexCpp :: define_BaseAmount (int baseArray []) {
     
 }
 
-IloIntArray CplexCpp :: define_Coefficient (IloEnv env) {
-    //(Pijk * Aijk) + (Aijk - 1)
-    IloInt length = Aijk.size();
-    IloIntArray scal(env);
-
-    for (IloInt i = 0 ; i < length; i++) {
-        scal.add((Aijk[i]*Pijk[i]) + (Aijk[i] - 1));
-    }
-
-    env.out() << "IloCPLEX scal is:  " << scal << endl;
-    return scal;
-}
-
 int CplexCpp :: get_IJ () {
     return IndiceI * IndiceJ;
 }
@@ -151,10 +116,27 @@ int CplexCpp :: get_IK () {
     return IndiceI * IndiceK;
 }
 
+IloIntArray CplexCpp :: define_Coefficient (IloEnv env) {
+    //(Pijk * Aijk) + (Aijk - 1)
+    IloInt length = Aijk.size();
+    IloIntArray scal(env);
+    
+    for (IloInt i = 0 ; i < length; i++) {
+        scal.add((Aijk[i]*Pijk[i]) + (Aijk[i] - 1));
+    }
+    
+    env.out() << "IloCPLEX scal is:  " << scal << endl;
+    return scal;
+}
+
+
 
 
 
 //=======================EMPLOYEE EVENT========================
+
+
+
 
 
 void Employee :: unwrap_Availability(int inputArray []) {
@@ -292,21 +274,31 @@ int Employee :: get_IJK () {
 
 
 
+
 //==========================MODEL==============================
 
 
-void CplexCpp :: populate(IloModel model, IloIntVarArray Yijk, IloRangeArray rng) {
-    IloEnv env = model.getEnv();
+
+
+
+static void populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
     Employee emp;
+    CplexCpp cpp;
+
+    IloEnv env = model.getEnv();
+
+    IloInt JK        = cpp.get_JK();
     IloInt varNumber = emp.get_IJK();
-    IloInt JK = get_JK();
-    IloIntArray objScalars = define_Coefficient(env);
+
+//    IloIntArray objScalars = cpp.define_Coefficient(env);
     
-    Yijk = IloIntVarArray(env, varNumber, 0, 1);
+//    Yijk = IloIntVarArray(env, varNumber, 0, 1);
 //    IloNumVarArray Xik = IloNumVarArray(env, varNumber/2, lowerBound, upperBound, ILOINT);
     
     //Objective Function
-    model.add(IloMaximize(env, IloScalProd(objScalars, Yijk)));
+//    IloObjective obj = IloAdd(model, IloMaximize(env, IloScalProd(objScalars, Yijk)));
+    
+//    model.add(IloMaximize(env, IloScalProd(objScalars, Yijk)));
     
     //Constraint 1-1:
     IloExpr expr1(env);
@@ -315,7 +307,6 @@ void CplexCpp :: populate(IloModel model, IloIntVarArray Yijk, IloRangeArray rng
     }
     IloRange rng1 = IloRange(env, Bjk[0], expr1, Bjk[0]);
     rng.IloExtractableArray::add(rng1);
-    env.out() << "rng1 -> " << rng1 << endl;
     expr1.end();
     
     //Constraint 1-2:
@@ -369,15 +360,38 @@ void CplexCpp :: populate(IloModel model, IloIntVarArray Yijk, IloRangeArray rng
 //    }
     
     env.out() << "THE MODEL:      " << endl << model << endl;
-//    env.out() << "THE cons1:      " << endl << cons1 << endl;
+}
+
+static void solveSchedule(IloCplex cplex, IloNumVarArray var, IloRangeArray rng){
+    
+    IloEnv env = var.getEnv();
+    CplexCpp cpp;
+    
+    if (cplex.solve()) {
+        
+        env.out() << "Solution Status :: " << cplex.getStatus()   << endl;
+        env.out() << "Solution Value  :: " << cplex.getObjValue() << endl;
+        
+        
+        IloNumArray values(env);
+        IloInt nvar = var.getSize();
+        
+        cplex.getValues(values, var);
+        env.out() << "Values: " << values << endl;
+        
+        for (int i = 0; i < nvar; i++) {
+            values[i] == 1 ? cpp.solution[i] = values[i] : cpp.solution[i] = 0;
+        }
+        values.end();
+        
+    }
+    env.out() << endl;
 }
 
 
 
 
-
-
-
+//=====================RETURN SOLUTION=========================
 
 
 

@@ -166,6 +166,11 @@ void RunCPLEX (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(msg);
 }
 
+//void ReturnSolution (const FunctionCallbackInfo<Value>& args) {
+//    Isolate* isolate = args.GetIsolate();
+//    
+//}
+
 void Init (Handle <Object> exports, Handle<Object> module) {
     NODE_SET_METHOD(exports, "define_data_size",     DefineDataSize);
     NODE_SET_METHOD(exports, "define_day_bounds",    DefineDayBounds);
