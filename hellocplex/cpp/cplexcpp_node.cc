@@ -171,243 +171,161 @@ void ReturnSolution (const FunctionCallbackInfo<Value>& args) {
     CplexCpp cpp;
     Employee emp;
     
-    Local<Array>  EmpIdArray        = Local<Array> :: Cast(args[0]);
-    Local<Array>  MngStartTimeArray = Local<Array> :: Cast(args[1]);
-    Local<Array>  MngEndTimeArray   = Local<Array> :: Cast(args[2]);
+    Local<Array> EmpIdArray        = Local<Array> :: Cast(args[0]);
+    Local<Array> MngStartTimeArray = Local<Array> :: Cast(args[1]);
+    Local<Array> MngEndTimeArray   = Local<Array> :: Cast(args[2]);
     
-    Local<Object> outputObject = Object :: New(isolate);
-    Local<Object> schedObject  = Object :: New(isolate);
+    Local<Object> Emp1 = Object :: New(isolate);
+    Local<Object> Emp2 = Object :: New(isolate);
+    Local<Object> Emp3 = Object :: New(isolate);
+    Local<Object> Emp4 = Object :: New(isolate);
+    Local<Object> d1 = Object :: New(isolate);
+    Local<Object> d2 = Object :: New(isolate);
+
     
-    Local<String> start = String :: NewFromUtf8(isolate, "StartTime");
-    Local<String> end   = String :: NewFromUtf8(isolate, "EndTime");
-    Local<String> date  = String :: NewFromUtf8(isolate, "2016-10-06");
+    
+    Local<Object> OutputObject = Object :: New(isolate);
+    Local<Object> Cursor = Object :: New(isolate);
+    
+    Local<String> SchedKey = String :: NewFromUtf8(isolate, "2016-10-05");
+    Local<Value> Emp1ID = EmpIdArray->Get(0);
+    Local<Value> Emp2ID = EmpIdArray->Get(1);
+    Local<Value> Emp3ID = EmpIdArray->Get(2);
+    Local<Value> Emp4ID = EmpIdArray->Get(3);
+    Local<String> d1Key  = String :: NewFromUtf8(isolate, "001");
+    Local<String> d2Key  = String :: NewFromUtf8(isolate, "002");
+    Local<String> start  = String :: NewFromUtf8(isolate, "StartTime");
+    Local<String> end    = String :: NewFromUtf8(isolate, "EndTime");
+    Local<String> empty  = String :: NewFromUtf8(isolate, "");
     
     int outputLength = emp.get_IJK();
-    int JK = cpp.get_JK();
-
-    int diff = emp.get_IJK() / cpp.get_IJ(); // diff = K = 2
+    int JK           = cpp.get_JK(); cout << "JK = " << JK << endl;
+    int diff         = emp.get_IJK() / cpp.get_IJ(); // diff = K = 2
     
-    int solution[] = {1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0};
+    int solution[] = {1, 0, 0, 0,     0, 0, 1, 0,     1, 0, 0, 1,     0, 1, 1, 0};
+    
+    
     
     for (int i = 0; i < outputLength; i += diff) {
         
-        
-        
-        int empId = 0;
+        if (solution[i] == 1 && solution[i+1] == 0) {//只上早班
+            
+
+            
+            if (i % JK == 0) {//Day 1
+                d1->Set(start, MngStartTimeArray->Get(0));
+                d1->Set(end, MngEndTimeArray->Get(0));
+                
+            } else if (i % JK != 0) {//Day 2
+                d2->Set(start, MngStartTimeArray->Get(2));
+                d2->Set(end, MngEndTimeArray->Get(2));
+                
+            } else {
+                
+                cout << "Some Technical Problem Goes in [1, 0] Scenario" << endl;
+            }
+            
+        } else if (solution[i] == 0 && solution[i+1] == 1) {//只上晚班
+            
+            if (i % JK == 0) {//Day 1
+                d1->Set(start, MngStartTimeArray->Get(1));
+                d1->Set(end, MngEndTimeArray->Get(1));
+                
+            } else if (i % JK != 0) {//Day 2
+                d2->Set(start, MngStartTimeArray->Get(3));
+                d2->Set(end, MngEndTimeArray->Get(3));
+                
+            } else {
+                cout << "Some Technical Problem Goes in [0, 1] Scenario" << endl;
+            }
+            
+        } else if (solution[i] == 1 && solution[i+1] == 1) {//早晚班都上
+            
+            if (i % JK == 0) {//Day 1
+                d1->Set(start, MngStartTimeArray->Get(0));
+                d1->Set(end, MngEndTimeArray->Get(1));
+                
+            } else if (i % JK != 0) {//Day 2
+                d2->Set(start, MngStartTimeArray->Get(2));
+                d2->Set(end, MngEndTimeArray->Get(3));
+                
+            } else {
+                cout << "Some Technical Problem Goes in [1, 1] Scenario" << endl;
+            }
+            
+        } else if (solution[i] == 0 && solution[i+1] == 0) {
+            
+            cout << "[0, 0] got found in index = " << i << endl;
+            
+        } else {
+            
+            cerr << "Something goes wrong..." << endl;
+            cerr << "Returning..." << endl << endl << endl;
+            return;
+        }
         
         switch (i) {
-            case  0:
-            case  1:
-            case  2:
-            case  3:
-                empId = 0;
+            case 0 ... 3:
+                
+                Emp1->Set(d1Key, d1->Clone());
+                Emp1->Set(d2Key, d2->Clone());
+
+                d1->Set(start, empty);
+                d1->Set(end, empty);
+                d2->Set(start, empty);
+                d2->Set(end, empty);
+                
                 break;
-            case  4:
-            case  5:
-            case  6:
-            case  7:
-                empId = 1;
+            case 4 ... 7:
+                
+                Emp2->Set(d1Key, d1->Clone());
+                Emp2->Set(d2Key, d2->Clone());
+
+                d1->Set(start, empty);
+                d1->Set(end, empty);
+                d2->Set(start, empty);
+                d2->Set(end, empty);
+                
                 break;
-            case  8:
-            case  9:
-            case 10:
-            case 11:
-                empId = 2;
+            case 8 ... 11:
+                
+                Emp3->Set(d1Key, d1->Clone());
+                Emp3->Set(d2Key, d2->Clone());
+                d1->Set(start, empty);
+                d1->Set(end, empty);
+                d2->Set(start, empty);
+                d2->Set(end, empty);
+                
                 break;
-            case 12:
-            case 13:
-            case 14:
-            case 15:
-                empId = 3;
+            case 12 ... 15:
+                
+                
+                Emp4->Set(d1Key, d1->Clone());
+                Emp4->Set(d2Key, d2->Clone());
+                d1->Set(start, empty);
+                d1->Set(end, empty);
+                d2->Set(start, empty);
+                d2->Set(end, empty);
+                
                 break;
             default:
                 break;
         }
         
-        Local<Object> d1 = Object :: New(isolate);
-        Local<Object> d2 = Object :: New(isolate);
-        
-        Local<Object> emp = Object :: New(isolate);
-        
-        Local<String> d1Key = String :: NewFromUtf8(isolate, "001");
-        Local<String> d2Key = String :: NewFromUtf8(isolate, "002");
-        
-        Local<Value> empKey = Local<Value> :: New(isolate, EmpIdArray->Get(i));
-        
-        
-        if (solution[i] == 1 && solution[i+1] == 0) {//只上早班
-            
-            if (i % JK == 0) {//DAY 1
-                
-                
-                
-                d1->Set(start, MngStartTimeArray->Get(0));
-                d1->Set(end, MngEndTimeArray->Get(0));
-                emp->Set(d1Key, d1);
-                
-                schedObject->Set(empKey, emp->Clone());
-
-//                emp->Delete(d1Key);
-            } else if (i % JK != 0) {//DAY 2
-                d2->Set(start, MngStartTimeArray->Get(2));
-                d2->Set(end, MngEndTimeArray->Get(2));
-                emp->Set(d2Key, d2);
-                
-                schedObject->Set(empKey, emp->Clone());
-        
-//                emp->Delete(d2Key);
-            } else {
-                cout << "Technical Problem in [1, 0] Scenario" << endl;
-                cout << "Returning..." << endl;
-            }
-        } else if (solution[i] == 0 && solution[i+1] == 1) {//只上晚班
-            
-            if (i % JK == 0) {//DAY 1
-                d1->Set(start, MngStartTimeArray->Get(1));
-                d1->Set(end, MngEndTimeArray->Get(1));
-                emp->Set(d1Key, d1);
-                
-                schedObject->Set(empKey, emp->Clone());
-                
-//                emp->Delete(d1Key);
-            } else if (i % JK != 0) {//DAY 2
-                d2->Set(start, MngStartTimeArray->Get(3));
-                d2->Set(end, MngEndTimeArray->Get(3));
-                emp->Set(d2Key, d2);
-                
-                schedObject->Set(empKey, emp->Clone());
-            
-//                emp->Delete(d2Key);
-            } else {
-                cout << "Technical Problem in [0, 1] Scenario" << endl;
-                cout << "Returning..." << endl;
-            }
-        } else if (solution[i] == 1 && solution[i+1] == 1) {//上早晚班
-
-            
-            if (i % JK == 0) {//DAY 1
-                d1->Set(start, MngStartTimeArray->Get(0));
-                d1->Set(end, MngEndTimeArray->Get(1));
-                emp->Set(d1Key, d1);
-
-                
-                schedObject->Set(empKey, emp->Clone());
-                
-//                emp->Delete(d1Key);
-            } else if (i % JK == 1) {
-                d2->Set(start, MngStartTimeArray->Get(2));
-                d2->Set(end, MngEndTimeArray->Get(3));
-                emp->Set(d2Key, d2);
-                
-                schedObject->Set(empKey, emp->Clone());
-                
-//                emp->Delete(d2Key);
-            } else {
-                cout << "Technical Problem in [1, 1] Scenario" << endl;
-                cout << "Returning..." << endl;
-            }
-        } else {
-            cout << "Something goes to ELSE here" << endl;
-        }
     }
     
-
-//    
-//    cout << "solution ----> [ ";
-//    for (int i = 0; i < outputLength; i++) {
-//        cout << solution[i] << " ";
-//    }
-//    cout << "]" << endl << endl;
-//    
+    Cursor->Set(Emp1ID, Emp1);
+    Cursor->Set(Emp2ID, Emp2);
+    Cursor->Set(Emp3ID, Emp3);
+    Cursor->Set(Emp4ID, Emp4);
     
-//    for (int i = 0; i < JK; i++) {
-//        
-//        int index;
-//        
-//        for (index = i * JK; index < (index + JK); index += diff) {
-//            
-//            if (solution[index] == 1 && solution[index + 1] == 0) {//只上早班
-//                Local<Object> d1 = Object :: New(isolate);
-//                Local<Object> d2 = Object :: New(isolate);
-//
-//                
-//                if (index % JK == 0) {//Day 1
-//                    d1->Set(start, MngStartTimeArray->Get(0));
-//                    d1->Set(end, MngEndTimeArray->Get(0));
-//
-//                    schedObject->Set(EmpIdArray->Get(i), d1->Clone());
-//
-//                    d1->Delete(start);
-//                    d2->Delete(end);
-//                } else if (index % JK != 0) {//Day 2
-//                    d2->Set(start, MngStartTimeArray->Get(2));
-//                    d2->Set(end, MngEndTimeArray->Get(2));
-//
-//                    schedObject->Set(EmpIdArray->Get(i), d2->Clone());
-//
-//                    d2->Delete(start);
-//                    d2->Delete(end);
-//                }
-//                
-//            } else if (solution[index] == 0 && solution[index + 1] == 1) {//只上晚班
-//                Local<Object> d1 = Object :: New(isolate);
-//                Local<Object> d2 = Object :: New(isolate);
-//                
-//                if (index % JK == 0) {//Day 1
-//                    d1->Set(start, MngStartTimeArray->Get(1));
-//                    d1->Set(end, MngEndTimeArray->Get(1));
-//
-//                    schedObject->Set(EmpIdArray->Get(i), d1->Clone());
-//
-//                    d1->Delete(start);
-//                    d1->Delete(end);
-//                } else if (index % JK != 0 ) {//Day 2
-//                    d2->Set(start, MngStartTimeArray->Get(3));
-//                    d2->Set(end, MngEndTimeArray->Get(3));
-//
-//                    schedObject->Set(EmpIdArray->Get(i), d2->Clone());
-//
-//                    d2->Delete(start);
-//                    d2->Delete(end);
-//                }
-//            } else if (solution[index] == 1 && solution[index + 1] == 1) {//早晚班都上
-//                Local<Object> d1 = Object :: New(isolate);
-//                Local<Object> d2 = Object :: New(isolate);
-//                
-//                if (index % JK == 0) {//Day 1
-//                    d1->Set(start, MngStartTimeArray->Get(0));
-//                    d1->Set(end, MngEndTimeArray->Get(1));
-//                    
-//                    schedObject->Set(EmpIdArray->Get(i), d1->Clone());
-//                    
-//                    d1->Delete(start);
-//                    d1->Delete(end);
-//                } else if (index % JK != 0) {//Day 2
-//                    d2->Set(start, MngStartTimeArray->Get(2));
-//                    d2->Set(end, MngEndTimeArray->Get(3));
-//
-//                    schedObject->Set(EmpIdArray->Get(i), d2->Clone());
-//
-//                    d2->Delete(start);
-//                    d2->Delete(end);
-//                }
-//                
-//            } else if (solution[index] == 0 && solution[index + 1] == 0) {
-//
-//            }
-//        }
-//        
-//    }
+    OutputObject->Set(SchedKey, Cursor);
     
-    
-    
-    
-    
-    outputObject->Set(date, schedObject);
-    
-    args.GetReturnValue().Set(outputObject);
+    args.GetReturnValue().Set(OutputObject);
 
 }
+
+
 
 void TestJSON (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();

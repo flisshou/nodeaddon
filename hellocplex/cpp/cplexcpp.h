@@ -2,10 +2,15 @@
 #include <string>
 #include <vector>
 #include <ilcplex/ilocplex.h>
+
 ILOSTLBEGIN
 
 class CplexCpp {
 public:
+
+  // bool solution[];
+  // int solution[];
+
 
   //CplexCpp();
   void define_DataSize(int, int, int);
@@ -21,7 +26,7 @@ public:
   int get_IK();
 
   void runCplex();
-  void populate(IloModel, IloIntVarArray, IloRangeArray);
+
 };
 
 class Employee {
