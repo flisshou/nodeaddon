@@ -35,6 +35,7 @@ var MngDancingArray   = [];
 var EmpPreferenceArray = [];
 var EmpStartTimeArray  = [];
 var EmpEndTimeArray    = [];
+var EmpIdArray         = [];
 //DATA TO SHOW
 var MngData = {};
 var EmpData = {};
@@ -85,6 +86,9 @@ employeeEventRef.child("010").on("value", function(date) {
 
   if (currentEvent == "2016-10-16") {
     employeeEventRef.child("010").child("2016-10-16").orderByKey().on("child_added", function (snapshot) {
+
+      EmpIdArray.push(snapshot.key);
+
       snapshot.forEach(function(childSnapshot) {
         var data = childSnapshot.val();
         // console.log("snapshot.key      -> " + snapshot.key);
@@ -97,6 +101,8 @@ employeeEventRef.child("010").on("value", function(date) {
         EmpData = {EmpStartTimeArray, EmpEndTimeArray, EmpPreferenceArray};
       });
     });
+
+    console.log("EmpIdArray         -> " + EmpIdArray);
 
     var durationArray = dateHourToInt(EmpEndTimeArray, EmpStartTimeArray);
     // console.log("durationArray -> " + durationArray);
@@ -118,7 +124,17 @@ employeeEventRef.child("010").on("value", function(date) {
 
   var retRunCPLEX = cplexcpp.run_cplex();
   console.log("retRunCPLEX :: " + retRunCPLEX);
+
+  // var retReturnSolution = cplexcpp.return_solution(EmpIdArray, MngStartTimeArray, MngEndTimeArray);
+  // console.log("retReturnSolution  ::  " + retReturnSolution);
+
+  var testJSON = cplexcpp.return_solution(EmpIdArray, MngStartTimeArray, MngEndTimeArray);
+  console.log("testJSON :: " + JSON.stringify(testJSON));
 });
+
+//GET SOLUTION FROM CPLEX
+// var retReturnSolution = cplexcpp.return_solution(EmpIdArray, MngStartTimeArray, MngEndTimeArray);
+// console.log("retReturnSolution  ::  " + retReturnSolution);
 
 
 //LOCAL FUNCTION - PARSE yyyy-mm-dd-hh:mm -> hh
@@ -142,11 +158,29 @@ function dateHourToInt(endArray, startArray){
 
 /* GET /api/v1/mimic.*/
 router.get('/mimic', function(req, res) {
-  res.send(EmpData);
+  res.send(MngData);
 });
 
 // modeule.exports = api;
 module.exports = router;
+
+
+//===============================Script for returning solution to database
+// var EmpIdArray = [];
+//
+// 從 employeeEvent抓 Id key 存入 EmpIdArray
+// 傳 EmpIdArray、給 v8 做比對（Set_Comparison）
+//
+//
+
+
+
+
+
+
+
+
+
 
 
 

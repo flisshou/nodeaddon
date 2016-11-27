@@ -11,8 +11,8 @@ int Tjk[] = {0, 0, 0, 0};
 int Bjk[] = {0, 0, 0, 0};
 vector<int> Aijk;
 vector<int> Pijk;
-static void populate(IloModel, IloNumVarArray, IloRangeArray);
-static void solveSchedule(IloCplex, IloNumVarArray, IloRangeArray);
+void populate(IloModel, IloNumVarArray, IloRangeArray);
+void solveSchedule(IloCplex, IloNumVarArray, IloRangeArray);
 
 
 
@@ -281,7 +281,7 @@ int Employee :: get_IJK () {
 
 
 
-static void populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
+void populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
     Employee emp;
     CplexCpp cpp;
 
@@ -362,10 +362,11 @@ static void populate(IloModel model, IloNumVarArray Yijk, IloRangeArray rng) {
     env.out() << "THE MODEL:      " << endl << model << endl;
 }
 
-static void solveSchedule(IloCplex cplex, IloNumVarArray var, IloRangeArray rng){
+void solveSchedule(IloCplex cplex, IloNumVarArray var, IloRangeArray rng){
     
     IloEnv env = var.getEnv();
-    CplexCpp cpp;
+//    CplexCpp cpp;
+//    Employee emp;
     
     if (cplex.solve()) {
         
@@ -374,16 +375,26 @@ static void solveSchedule(IloCplex cplex, IloNumVarArray var, IloRangeArray rng)
         
         
         IloNumArray values(env);
-        IloInt nvar = var.getSize();
+//        IloInt nvar = var.getSize();
         
         cplex.getValues(values, var);
         env.out() << "Values: " << values << endl;
-        
-        for (int i = 0; i < nvar; i++) {
-            values[i] == 1 ? cpp.solution[i] = values[i] : cpp.solution[i] = 0;
-        }
+//        
+//        for (int i = 0; i < nvar; i++) {
+//            if (values[i] == 1) {
+//                cpp.solution[i] = true;
+//            } else {
+//                cpp.solution[i] = false;
+//            }
+//        
+//        }
         values.end();
         
+//        cout << "cpp.solution in cplexcpp.cc ----> [ ";
+//        for (int i = 0; i < emp.get_IJK(); i++) {
+//            cout << cpp.solution[i] << " ";
+//        }
+//        cout << "]" << endl << endl;
     }
     env.out() << endl;
 }
@@ -392,6 +403,41 @@ static void solveSchedule(IloCplex cplex, IloNumVarArray var, IloRangeArray rng)
 
 
 //=====================RETURN SOLUTION=========================
+
+//Solution
+//       [                   Day 1  Day 2
+//Emp1    1 0 0 0    --->    09~16    0
+//Emp2    0 0 1 0    --->      0    09~16
+//Emp3    1 0 0 1    --->    09~16  16~22
+//Emp4    0 1 1 0    --->    16~22  09~16    => Should avoid this kind of situation
+//       ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
