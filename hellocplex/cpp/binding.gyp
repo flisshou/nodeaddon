@@ -15,7 +15,7 @@
                                                       "OTHER_CPLUPLUSFLAGS": ["-DIL_STD"],
                                                       "CLANG_CXX_LIBRARY": "libstdc++",
                                                       "CLANG_CXX_LANGUAGE_STANDARD": "c++11",
-                                                      "MACOSX_DEPLOYMENT_TARGET": "10.7"}
+                                                      "MACOSX_DEPLOYMENT_TARGET": "10.10"}
                                    }
                     ]]
      }

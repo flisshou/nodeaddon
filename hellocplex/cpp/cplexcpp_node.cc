@@ -25,17 +25,18 @@ void DefineDataSize (const FunctionCallbackInfo<Value>& args) {
 void DefineTimeSections (const FunctionCallbackInfo<Value>& args){
     Isolate* isolate = args.GetIsolate();
     CplexCpp cpp;
+    Employee emp;
     
-    Local<Array> inputArray = Local<Array> :: Cast(args[0]);
+    Local<Array>   inputArray = Local<Array> :: Cast(args[0]);//[ 7 6 7 6 ]
+    int length = args[1]->Int32Value();
     
-    int outputLength = cpp.get_JK();
-    int outputArray[outputLength];
+    int outputArray[length];
     
-    for (int i = 0; i < outputLength; i++) {
+    for (int i = 0; i < length; i++) {
         outputArray[i] = inputArray->Get(i)->Int32Value();
     }
     
-    cpp.define_TimeSections(outputArray);
+    cpp.define_TimeSections(outputArray, length);
     
     Local<String> msg = String :: NewFromUtf8(isolate, "Received Tjk Data.");
     args.GetReturnValue().Set(msg);
@@ -87,25 +88,49 @@ void DefineWeekBounds (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(msg);
 }
 
-void UnwrapAvailability (const FunctionCallbackInfo<Value>& args) {
+void UnwrapBusinessHours (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
     CplexCpp cpp;
     Employee emp;
     
     Local<Array> inputArray = Local<Array> :: Cast(args[0]);
     
-    int outputLength = cpp.get_IK();
+    int outputLength = cpp.get_IK() * 2;
     int outputArray[outputLength];
     
-    for (int i = 0; i < outputLength; i++) {
-        outputArray[i] = inputArray->Get(i)->Int32Value();
+    for (int i = 0; i < outputLength; i += 2) {
+        outputArray[i]   = inputArray->Get(0)->Int32Value();
+        outputArray[i+1] = inputArray->Get(1)->Int32Value();
     }
+    emp.make_TimeSections(outputArray);
     
-    emp.print_Duration(outputArray);
-    emp.unwrap_Availability(outputArray);
+    Local<String> msg = String :: NewFromUtf8(isolate, "Received Business Hour Data.");
+    args.GetReturnValue().Set(msg);
+}
+
+void UnwrapAvailability (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+    CplexCpp cpp;
+    Employee emp;
+    
+    Local<Array> inputArray = Local<Array> :: Cast(args[0]);
+    int length = args[1]->Int32Value();
+    
+
+    int outputArray[length];
+    
+    cout << "availability = [ ";
+    for (int i = 0; i < length; i++) {
+        outputArray[i] = inputArray->Get(i)->Int32Value();
+        cout << inputArray->Get(i)->Int32Value() << " ";
+    }
+    cout << "]" << endl;
+    
+    emp.unwrap_Availability(outputArray, length);
     
     Local<String> msg = String :: NewFromUtf8(isolate, "Received Aijk Data.");
     args.GetReturnValue().Set(msg);
+    
 }
 
 void UnwrapPreference (const FunctionCallbackInfo<Value>& args) {
@@ -114,18 +139,40 @@ void UnwrapPreference (const FunctionCallbackInfo<Value>& args) {
     Employee emp;
     
     Local<Array> inputArray = Local<Array> :: Cast(args[0]);
+    int length = args[1]->Int32Value();
     
-    int outputLength = cpp.get_IK();
-    int outputArray[outputLength];
+    int outputArray[length];
     
-    for (int i = 0; i < outputLength; i++) {
+    for (int i = 0; i < length; i++) {
         outputArray[i] = inputArray->Get(i)->Int32Value();
     }
     
-    emp.unwrap_Preference(outputArray);
-    emp.print_Preference(outputArray);
+    emp.unwrap_Preference(outputArray, length);
+
     
     Local<String> msg = String :: NewFromUtf8(isolate, "Received Pijk Data.");
+    args.GetReturnValue().Set(msg);
+}
+
+void UnwrapSeniority (const FunctionCallbackInfo<Value>& args) {
+    Isolate* isolate = args.GetIsolate();
+//    CplexCpp cpp;
+    Employee emp;
+    
+    Local<Array> inputArray = Local<Array> :: Cast(args[0]);//[111, 222, 333, 444]
+    
+    int inputLength  = inputArray->Length();
+//    int outputLength = emp.get_IJK() / cpp.get_JK();
+    int outputArray[inputLength];
+    
+    for (int i = 0; i < inputLength; i++) {
+        int val = inputArray->Get(inputLength - i - 1)->Int32Value();
+        outputArray[i] = val % 100;
+    }
+    
+    emp.unwrap_Seniority(outputArray);
+    
+    Local<String> msg = String :: NewFromUtf8(isolate, "Received Wi Data.");
     args.GetReturnValue().Set(msg);
 }
 
@@ -156,303 +203,49 @@ void GetIK (const FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(retValue);
 }
 
-void RunCPLEX (const FunctionCallbackInfo<Value>& args) {
+void GetIJK (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
-    CplexCpp cpp;
+    Employee emp;
     
-    cpp.runCplex();
+    Local<Number> retValue = Int32 :: New(isolate, emp.get_IJK());
     
-    Local<String> msg = String :: NewFromUtf8(isolate, "Invoking the CPLEX CPP......");
-    args.GetReturnValue().Set(msg);
+    args.GetReturnValue().Set(retValue);
 }
 
-void ReturnSolution (const FunctionCallbackInfo<Value>& args) {
+void RunCPLEX (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
     CplexCpp cpp;
     Employee emp;
     
-    Local<Array> EmpIdArray        = Local<Array> :: Cast(args[0]);
-    Local<Array> MngStartTimeArray = Local<Array> :: Cast(args[1]);
-    Local<Array> MngEndTimeArray   = Local<Array> :: Cast(args[2]);
+    cout << "Invoking CPLEX CPP..." << endl;
+    cpp.runCplex();
+    cout << "Wrapping Solution..." << endl;
     
-    Local<Object> Emp1 = Object :: New(isolate);
-    Local<Object> Emp2 = Object :: New(isolate);
-    Local<Object> Emp3 = Object :: New(isolate);
-    Local<Object> Emp4 = Object :: New(isolate);
-    Local<Object> d1 = Object :: New(isolate);
-    Local<Object> d2 = Object :: New(isolate);
-
+    vector<int> solution = cpp.get_Result();
+    Local<Array>  output = Array :: New(isolate);
+    int              IJK = emp.get_IJK();
     
-    
-    Local<Object> OutputObject = Object :: New(isolate);
-    Local<Object> Cursor = Object :: New(isolate);
-    
-    Local<String> SchedKey = String :: NewFromUtf8(isolate, "2016-10-05");
-    Local<Value> Emp1ID = EmpIdArray->Get(0);
-    Local<Value> Emp2ID = EmpIdArray->Get(1);
-    Local<Value> Emp3ID = EmpIdArray->Get(2);
-    Local<Value> Emp4ID = EmpIdArray->Get(3);
-    Local<String> d1Key  = String :: NewFromUtf8(isolate, "001");
-    Local<String> d2Key  = String :: NewFromUtf8(isolate, "002");
-    Local<String> start  = String :: NewFromUtf8(isolate, "StartTime");
-    Local<String> end    = String :: NewFromUtf8(isolate, "EndTime");
-    Local<String> empty  = String :: NewFromUtf8(isolate, "");
-    
-    int outputLength = emp.get_IJK();
-    int JK           = cpp.get_JK(); cout << "JK = " << JK << endl;
-    int diff         = emp.get_IJK() / cpp.get_IJ(); // diff = K = 2
-    
-    int solution[] = {1, 0, 0, 0,     0, 0, 1, 0,     1, 0, 0, 1,     0, 1, 1, 0};
-    
-    
-    
-    for (int i = 0; i < outputLength; i += diff) {
-        
-        if (solution[i] == 1 && solution[i+1] == 0) {//只上早班
-            
-
-            
-            if (i % JK == 0) {//Day 1
-                d1->Set(start, MngStartTimeArray->Get(0));
-                d1->Set(end, MngEndTimeArray->Get(0));
-                
-            } else if (i % JK != 0) {//Day 2
-                d2->Set(start, MngStartTimeArray->Get(2));
-                d2->Set(end, MngEndTimeArray->Get(2));
-                
-            } else {
-                
-                cout << "Some Technical Problem Goes in [1, 0] Scenario" << endl;
-            }
-            
-        } else if (solution[i] == 0 && solution[i+1] == 1) {//只上晚班
-            
-            if (i % JK == 0) {//Day 1
-                d1->Set(start, MngStartTimeArray->Get(1));
-                d1->Set(end, MngEndTimeArray->Get(1));
-                
-            } else if (i % JK != 0) {//Day 2
-                d2->Set(start, MngStartTimeArray->Get(3));
-                d2->Set(end, MngEndTimeArray->Get(3));
-                
-            } else {
-                cout << "Some Technical Problem Goes in [0, 1] Scenario" << endl;
-            }
-            
-        } else if (solution[i] == 1 && solution[i+1] == 1) {//早晚班都上
-            
-            if (i % JK == 0) {//Day 1
-                d1->Set(start, MngStartTimeArray->Get(0));
-                d1->Set(end, MngEndTimeArray->Get(1));
-                
-            } else if (i % JK != 0) {//Day 2
-                d2->Set(start, MngStartTimeArray->Get(2));
-                d2->Set(end, MngEndTimeArray->Get(3));
-                
-            } else {
-                cout << "Some Technical Problem Goes in [1, 1] Scenario" << endl;
-            }
-            
-        } else if (solution[i] == 0 && solution[i+1] == 0) {
-            
-            cout << "[0, 0] got found in index = " << i << endl;
-            
-        } else {
-            
-            cerr << "Something goes wrong..." << endl;
-            cerr << "Returning..." << endl << endl << endl;
-            return;
-        }
-        
-        switch (i) {
-            case 0 ... 3:
-                
-                Emp1->Set(d1Key, d1->Clone());
-                Emp1->Set(d2Key, d2->Clone());
-
-                d1->Set(start, empty);
-                d1->Set(end, empty);
-                d2->Set(start, empty);
-                d2->Set(end, empty);
-                
-                break;
-            case 4 ... 7:
-                
-                Emp2->Set(d1Key, d1->Clone());
-                Emp2->Set(d2Key, d2->Clone());
-
-                d1->Set(start, empty);
-                d1->Set(end, empty);
-                d2->Set(start, empty);
-                d2->Set(end, empty);
-                
-                break;
-            case 8 ... 11:
-                
-                Emp3->Set(d1Key, d1->Clone());
-                Emp3->Set(d2Key, d2->Clone());
-                d1->Set(start, empty);
-                d1->Set(end, empty);
-                d2->Set(start, empty);
-                d2->Set(end, empty);
-                
-                break;
-            case 12 ... 15:
-                
-                
-                Emp4->Set(d1Key, d1->Clone());
-                Emp4->Set(d2Key, d2->Clone());
-                d1->Set(start, empty);
-                d1->Set(end, empty);
-                d2->Set(start, empty);
-                d2->Set(end, empty);
-                
-                break;
-            default:
-                break;
-        }
-        
+    for (int i = 0; i < IJK; i++) {
+        output->Set(i, Int32 :: New(isolate, solution[i]));
     }
     
-    Cursor->Set(Emp1ID, Emp1);
-    Cursor->Set(Emp2ID, Emp2);
-    Cursor->Set(Emp3ID, Emp3);
-    Cursor->Set(Emp4ID, Emp4);
-    
-    OutputObject->Set(SchedKey, Cursor);
-    
-    args.GetReturnValue().Set(OutputObject);
-
+    args.GetReturnValue().Set(output);
 }
 
-
-
-void TestJSON (const FunctionCallbackInfo<Value>& args) {
+void RetrieveSpares (const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
-//    CplexCpp cpp;
-//    Employee emp;
+    Employee emp;
+    CplexCpp cpp;
     
-    Local<Array>  EmpIdArray        = Local<Array> :: Cast(args[0]);//{102306111 102306222 102306333 102306444}
-    Local<Array>  MngStartTimeArray = Local<Array> :: Cast(args[1]);//{   09        16        09        16}
-    Local<Array>  MngEndTimeArray   = Local<Array> :: Cast(args[2]);//{   16        22        16        22}
+    vector<int> spares  = cpp.get_Spares();
+    Local<Array> output = Array :: New(isolate);
+    int IJK             = emp.get_IJK();
     
-    Local<Object> outputObject = Object :: New(isolate);
-    Local<Object> schedObject  = Object :: New(isolate);
+    for (int i = 0; i < IJK; i++) {
+        output->Set(i, Int32 :: New(isolate, spares[i]));
+    }
     
-    Local<String> start = String :: NewFromUtf8(isolate, "StartTime");
-    Local<String> end   = String :: NewFromUtf8(isolate, "EndTime");
-    Local<String> date  = String :: NewFromUtf8(isolate, "2016-10-06");
-    
-//    int outputLength = emp.get_IJK();
-//    int JK = cpp.get_JK();
-////
-//    int diff = emp.get_IJK() / cpp.get_IJ(); // diff = K = 2
-//    
-//    int solution[] = {1, 0, 0, 0};
-    
-    Local<Object> d1 = Object :: New(isolate);
-    
-    d1->Set(start->ToString(), MngStartTimeArray->Get(0));
-    d1->Set(end->ToString(), MngEndTimeArray->Get(0));
-    
-    schedObject->Set(EmpIdArray->Get(0), d1->Clone());
-    
-    d1->Delete(start);
-    d1->Delete(end);
-    
-    outputObject->Set(date, schedObject);
-    
-    
-    
-//    for (int i = 0; i < JK; i += diff) {
-//        
-//        Local<Object> d1 = Object :: New(isolate);
-//        Local<Object> d2 = Object :: New(isolate);
-//        
-//        if (solution[i] == 1 && solution[i+1] == 0) {//只上早班
-//          
-//            if (i % JK == 0) {//Day 1
-//                
-////                Local<Object> tp = Object :: New(isolate);
-//                
-//                d1->Set(start, MngStartTimeArray->Get(0));
-//                d1->Set(end, MngEndTimeArray->Get(0));
-////                tp->Set(start, d1->Get(start));
-////                tp->Set(end, d1->Get(end));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d1->Clone());
-//                
-//                d1->Delete(start);
-//                d1->Delete(end);
-//                
-//
-//            } else if (i % JK != 0) {
-////                Local<Object> tp = Object :: New(isolate);
-//                
-//                d2->Set(start, MngStartTimeArray->Get(2));
-//                d2->Set(end, MngEndTimeArray->Get(2));
-////                tp->Set(start, MngStartTimeArray->Get(start));
-////                tp->Set(end, MngEndTimeArray->Get(end));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d2->Clone());
-//                
-//                d2->Delete(start);
-//                d2->Delete(end);
-//            }
-//            
-//        } else if (solution[i] == 0 && solution[i+1] == 1) { //只上晚班
-//            
-//            if (i % JK == 0) {
-////                Local<Object> tp = Object :: New(isolate);
-//                
-//                d1->Set(start, MngStartTimeArray->Get(1));
-//                d1->Set(end, MngEndTimeArray->Get(1));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d1->Clone());
-//                
-//                d1->Delete(start);
-//                d1->Delete(end);
-//            } else if (i % JK != 0) {
-//                d2->Set(start, MngStartTimeArray->Get(3));
-//                d2->Set(end, MngEndTimeArray->Get(3));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d2->Clone());
-//                
-//                d2->Delete(start);
-//                d2->Delete(end);
-//            }
-//        } else if (solution[i] == 1 && solution[i+1] == 1) {
-//            if (i % JK == 0) {
-//                d1->Set(start, MngStartTimeArray->Get(0));
-//                d1->Set(end, MngEndTimeArray->Get(1));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d1->Clone());
-//                
-//                d1->Delete(start);
-//                d1->Delete(end);
-//            } else if (i % JK != 0) {
-//                d2->Set(start, MngStartTimeArray->Get(2));
-//                d2->Set(end, MngEndTimeArray->Get(3));
-//                
-//                schedObject->Set(EmpIdArray->Get(0), d2->Clone());
-//                
-//                d2->Delete(start);
-//                d2->Delete(end);
-//            }
-//            
-//        } else {
-//            cout << "Something goes wrong" << endl;
-//            cout << "Returning..........." << endl << endl;
-//            
-//            return;
-//        }
-//    }
-    
-//    outputObject->Set(date, schedObject);
-    
-    args.GetReturnValue().Set(outputObject);
-    
-    
+    args.GetReturnValue().Set(output);
 }
 
 void Init (Handle <Object> exports, Handle<Object> module) {
@@ -461,14 +254,17 @@ void Init (Handle <Object> exports, Handle<Object> module) {
     NODE_SET_METHOD(exports, "define_week_bounds",   DefineWeekBounds);
     NODE_SET_METHOD(exports, "define_time_sections", DefineTimeSections);
     NODE_SET_METHOD(exports, "define_base_amount",   DefineBaseAmount);
-    NODE_SET_METHOD(exports, "unwrap_availability",  UnwrapAvailability);
-    NODE_SET_METHOD(exports, "unwrap_preference",    UnwrapPreference);
+    NODE_SET_METHOD(exports, "unwrap_business_hours", UnwrapBusinessHours);
+    NODE_SET_METHOD(exports, "unwrap_availability",   UnwrapAvailability);
+    NODE_SET_METHOD(exports, "unwrap_preference",     UnwrapPreference);
+    NODE_SET_METHOD(exports, "unwrap_seniority",      UnwrapSeniority);
     NODE_SET_METHOD(exports, "get_IJ", GetIJ);
     NODE_SET_METHOD(exports, "get_JK", GetJK);
     NODE_SET_METHOD(exports, "get_IK", GetIK);
+    NODE_SET_METHOD(exports, "get_IJK", GetIJK);
     NODE_SET_METHOD(exports, "run_cplex",       RunCPLEX);
-    NODE_SET_METHOD(exports, "return_solution", ReturnSolution);
-    NODE_SET_METHOD(exports, "test_JSON", TestJSON);
+    NODE_SET_METHOD(exports, "retrieve_spares", RetrieveSpares);
+
 }
 
 NODE_MODULE(cplexcpp, Init)

@@ -1,160 +1,454 @@
 {
   "bulletin" : {
-    "-KVFoAvU7E8q5i59JQpA" : {
+    "-KZ1OdOTPiu3k7cTD7J8" : {
       "content" : "",
-      "district" : "districtID100",
-      "employee" : "102306111",
+      "district" : "100",
+      "employee" : "102306110",
       "section" : 0,
-      "store" : "storeID010",
-      "time" : "Oct 29, 2016, 10:20 PM",
-      "title" : "111's store post"
+      "store" : "010",
+      "time" : "Dec 15, 20:12",
+      "title" : "週六(12/24-12/31)聖誕節期間將推出買一送一，大家加油。"
     },
-    "-KVFoF7OMLS5kaSpT7Nz" : {
+    "-KZ1OfZbjxESsvR2z4yi" : {
       "content" : "",
-      "district" : "districtID100",
-      "employee" : "102306111",
-      "section" : 1,
-      "store" : "storeID010",
-      "time" : "Oct 29, 2016, 10:21 PM",
-      "title" : "111's district post"
-    },
-    "-KVJpOSxIHQ1hqYstHld" : {
-      "content" : "",
-      "district" : "districtID100",
-      "employee" : "102306112",
+      "district" : "100",
+      "employee" : "102306110",
       "section" : 0,
-      "store" : "storeID010",
-      "time" : "Oct 30, 2016, 5:04 PM",
-      "title" : "112' store post edited"
+      "store" : "010",
+      "time" : "Dec 15, 20:12",
+      "title" : "寒流來襲，公司在休息室提供滿滿的熱飲。"
     },
-    "-KVJpTTrB0uJtmvcGNgx" : {
+    "-KZ1Ohtz6Lyridj8R0ve" : {
       "content" : "",
-      "district" : "districtID100",
-      "employee" : "102306112",
+      "district" : "100",
+      "employee" : "102306110",
       "section" : 1,
-      "store" : "storeID010",
-      "time" : "Oct 30, 2016, 5:05 PM",
-      "title" : "112's district post"
+      "store" : "010",
+      "time" : "Dec 15, 20:12",
+      "title" : "高雄左營門市金字塔即將現身"
+    },
+    "-KZ1VK9Gu-9fciz0r4xz" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 0,
+      "store" : "010",
+      "time" : "Dec 15, 20:12",
+      "title" : "公司新流程已發布，詳內閱。"
+    },
+    "-KZ1VN2bs9vnTD57lSvv" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 1,
+      "store" : "010",
+      "time" : "Dec 15, 20:12",
+      "title" : "本週寒流來襲，請同仁注意保暖。"
+    },
+    "-KZEmK4_C9C4wAPJt3qX" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 0,
+      "store" : "010",
+      "time" : "Dec 18, 10:12",
+      "title" : "客人抱怨廁所清潔度，請清潔工多留意。"
+    },
+    "-KZEmKm388oYN3_KbEp2" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 0,
+      "store" : "010",
+      "time" : "Dec 18, 10:12",
+      "title" : "贈點活動停止囉！贈品大家來抽獎吧。"
+    },
+    "-KZEmLKHZHePDNn0qBiM" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 1,
+      "store" : "010",
+      "time" : "Dec 18, 10:12",
+      "title" : "最近接獲員工抱怨宜蘭門市的廁所清潔，請負責崗位儘速改善。"
+    },
+    "-KZEmLs8m8r3-orOenpq" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 1,
+      "store" : "010",
+      "time" : "Dec 18, 10:12",
+      "title" : "泰山門市近日遭遇奧客襲擊，請各店派遣人力支援。"
+    },
+    "-KZEmMOUgR1kjweGds7u" : {
+      "content" : "",
+      "district" : "100",
+      "employee" : "102306110",
+      "section" : 1,
+      "store" : "010",
+      "time" : "",
+      "title" : "由於奧客已攻佔泰山門市，即日起贈點活動取消。"
     }
   },
   "distance" : {
-    "storeID010" : {
-      "storeID020" : 5000,
-      "storeID030" : 6000,
-      "storeID040" : 10000
+    "010" : {
+      "020" : 5000,
+      "030" : 6000,
+      "040" : 10000
     },
-    "storeID020" : {
-      "storeID010" : 5000,
-      "storeID030" : 7000,
-      "storeID040" : 9000
+    "020" : {
+      "010" : 5000,
+      "030" : 7000,
+      "040" : 9000
     },
-    "storeID030" : {
-      "storeID010" : 6000,
-      "storeID020" : 7000,
-      "storeID040" : 2000
+    "030" : {
+      "010" : 6000,
+      "020" : 7000,
+      "040" : 2000
     },
-    "storeID040" : {
-      "storeID010" : 10000,
-      "storeID020" : 9000,
-      "storeID030" : 2000
+    "040" : {
+      "010" : 10000,
+      "020" : 9000,
+      "030" : 2000
     }
   },
   "district" : {
-    "districtID100" : {
-      "districtManager" : "102306111",
+    "100" : {
+      "districtManager" : "102306110",
       "name" : "文山區",
       "stores" : {
-        "storeID010" : true,
-        "storeID020" : true
+        "010" : true,
+        "020" : true
       }
     },
-    "districtID200" : {
-      "districtManager" : "102306222",
+    "200" : {
+      "districtManager" : "102306120",
       "name" : "公館區",
       "stores" : {
-        "storeID030" : true,
-        "storeID040" : true
+        "030" : true,
+        "040" : true
       }
     }
   },
   "employee" : {
-    "102306111" : {
-      "ID" : "102306111",
-      "district" : "districtID100",
-      "name" : "SS",
+    "102306110" : {
+      "ID" : "102306110",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "on"
+      },
+      "district" : "100",
+      "name" : "林聖翔",
       "password" : "0000",
       "payment" : {
-        "monthly" : 45000
+        "monthly" : "45000"
       },
-      "phone" : "0911111111",
-      "profession" : {
-        "cleaning" : true,
-        "coding" : true
-      },
+      "phone" : "0988888888",
+      "profession" : "beverage",
       "rank" : "storeManager",
+      "store" : "010"
+    },
+    "102306111" : {
+      "ID" : "102306111",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "葉浩平",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0988888888",
+      "profession" : "cleaning",
+      "rank" : "partTime",
       "store" : "010"
     },
     "102306112" : {
       "ID" : "102306112",
-      "district" : "districtID100",
-      "name" : "FW",
+      "alarmClock" : {
+        "interval" : "60"
+      },
+      "district" : "100",
+      "name" : "王宥翔",
       "password" : "0000",
       "payment" : {
         "hourly" : "120"
       },
       "phone" : "0911111111",
-      "profession" : {
-        "cleaning" : true,
-        "coding" : true
-      },
+      "profession" : "beverage",
       "rank" : "partTime",
-      "store" : "storeID010"
+      "store" : "010"
     },
-    "102306221" : {
-      "ID" : "102306221",
-      "district" : "districtID100",
-      "name" : "FH",
+    "102306113" : {
+      "ID" : "102306113",
+      "district" : "100",
+      "name" : "侯雅方",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306114" : {
+      "ID" : "102306114",
+      "district" : "100",
+      "name" : "葉大雄",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306115" : {
+      "ID" : "102306115",
+      "district" : "100",
+      "name" : "小可愛",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306116" : {
+      "ID" : "102306116",
+      "district" : "100",
+      "name" : "阿土伯",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306117" : {
+      "ID" : "102306117",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "小酸梅",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0988888888",
+      "profession" : "beverage",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306118" : {
+      "ID" : "102306118",
+      "district" : "100",
+      "name" : "大平台",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "beverage",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306119" : {
+      "ID" : "102306119",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "盧允元",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0988888888",
+      "profession" : "cleaning",
+      "rank" : "partTime",
+      "store" : "010"
+    },
+    "102306120" : {
+      "ID" : "102306120",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "二店甲",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0988888888",
+      "profession" : "beverage",
+      "rank" : "storeManager",
+      "store" : "020"
+    },
+    "102306121" : {
+      "ID" : "102306121",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "二店乙",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0988888888",
+      "profession" : "cleaning",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306122" : {
+      "ID" : "102306122",
+      "district" : "100",
+      "name" : "二店丙",
+      "password" : "0000",
+      "payment" : {
+        "hourly" : "120"
+      },
+      "phone" : "0911111111",
+      "profession" : "beverage",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306123" : {
+      "ID" : "102306123",
+      "district" : "100",
+      "name" : "二店丁",
       "password" : "0000",
       "payment" : {
         "monthly" : "45000"
       },
       "phone" : "0911111111",
-      "profession" : {
-        "cleaning" : true,
-        "coding" : true
-      },
-      "rank" : "storeManager",
-      "store" : "storeID020"
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "020"
     },
-    "102306222" : {
-      "ID" : "102306222",
-      "district" : "districtID100",
-      "name" : "GY",
+    "102306124" : {
+      "ID" : "102306124",
+      "district" : "100",
+      "name" : "二店戊",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306125" : {
+      "ID" : "102306125",
+      "district" : "100",
+      "name" : "二店己",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306126" : {
+      "ID" : "102306126",
+      "district" : "100",
+      "name" : "二店庚",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0911111111",
+      "profession" : "cashier",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306127" : {
+      "ID" : "102306127",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "二店辛",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0988888888",
+      "profession" : "cleaning",
+      "rank" : "partTime",
+      "store" : "020"
+    },
+    "102306128" : {
+      "ID" : "102306128",
+      "district" : "100",
+      "name" : "二店壬",
       "password" : "0000",
       "payment" : {
         "hourly" : "120"
       },
-      "phone" : "0922222222",
-      "profession" : {
-        "bartender" : true
-      },
+      "phone" : "0911111111",
+      "profession" : "beverage",
       "rank" : "partTime",
-      "store" : "storeID020"
+      "store" : "020"
+    },
+    "102306129" : {
+      "ID" : "102306129",
+      "alarmClock" : {
+        "interval" : "33",
+        "soundName" : "",
+        "switch" : "off"
+      },
+      "district" : "100",
+      "name" : "二店癸",
+      "password" : "0000",
+      "payment" : {
+        "monthly" : "45000"
+      },
+      "phone" : "0988888888",
+      "profession" : "cleaning",
+      "rank" : "partTime",
+      "store" : "020"
     }
   },
   "employeeEvent" : {
     "010" : {
       "2016-10-16" : {
         "102306111" : {
-          "-KVdUkoyr4xKEU99Xw6i" : {
-            "EndDate" : "2016-10-18-22:00",
-            "Preference" : 5,
-            "StartDate" : "2016-10-18-09:00"
-          },
-          "-KVogvnA8f8S5YxvYmBG" : {
+          "-KXu_Vhabm2hkO_SCq0j" : {
             "EndDate" : "2016-10-17-22:00",
             "Preference" : 3,
             "StartDate" : "2016-10-17-09:00"
+          },
+          "-KXu_hmH7l5JllKzFri7" : {
+            "EndDate" : "2016-10-18-22:00",
+            "Preference" : 3,
+            "StartDate" : "2016-10-18-09:00"
           }
         },
         "102306222" : {
@@ -194,25 +488,645 @@
           }
         }
       },
-      "currentEvent" : "2016-10-16",
+      "2016-12-05" : {
+        "102306111" : {
+          "00001" : {
+            "EndDate" : "2016-12-05-23:30",
+            "Preference" : 5,
+            "StartDate" : "2016-12-05-14:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-12-06-23:30",
+            "Preference" : 4,
+            "StartDate" : "2016-12-06-14:00"
+          },
+          "Profession" : "Supervisor"
+        },
+        "102306222" : {
+          "00001" : {
+            "EndDate" : "2016-12-05-23:30",
+            "Preference" : 3,
+            "StartDate" : "2016-12-05-06:30"
+          },
+          "00002" : {
+            "EndDate" : "2016-12-06-18:00",
+            "Preference" : 5,
+            "StartDate" : "2016-12-06-06:30"
+          },
+          "Profession" : "Supervisor"
+        },
+        "102306333" : {
+          "00001" : {
+            "EndDate" : "2016-12-05-20:00",
+            "Preference" : 5,
+            "StartDate" : "2016-12-05-10:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-12-06-23:30",
+            "Preference" : 3,
+            "StartDate" : "2016-12-06-06:30"
+          },
+          "Profession" : "PartTime"
+        },
+        "102306444" : {
+          "00001" : {
+            "EndDate" : "2016-12-05-16:00",
+            "Preference" : 4,
+            "StartDate" : "2016-12-05-06:30"
+          },
+          "00002" : {
+            "EndDate" : "2016-12-06-16:00",
+            "Preference" : 5,
+            "StartDate" : "2016-12-06-08:00"
+          },
+          "Profession" : "PartTime"
+        },
+        "102306555" : {
+          "00001" : {
+            "EndDate" : "2016-12-05-23:30",
+            "Preference" : 3,
+            "StartDate" : "2016-12-05-14:00"
+          },
+          "00002" : {
+            "EndDate" : "2016-12-06-23:30",
+            "Preference" : 3,
+            "StartDate" : "2016-12-06-06:30"
+          },
+          "Profession" : "PartTime"
+        }
+      },
+      "2016-12-19" : {
+        "102306112" : {
+          "00003" : {
+            "EndDate" : "2016-12-22-20:00",
+            "Preference" : 3,
+            "StartDate" : "2016-12-22-14:00"
+          }
+        },
+        "beverage" : {
+          "102306110" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-19-10:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-10:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-22-10:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-23-10:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-24-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-24-10:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-25-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-25-10:00"
+            }
+          },
+          "102306112" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-19-14:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-14:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-22-14:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 1,
+              "StartDate" : "2016-12-24-14:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-14:00"
+            }
+          },
+          "102306117" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-19-16:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-16:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-22-16:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-16:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-25-10:00"
+            }
+          },
+          "102306118" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-19-10:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-20-10:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-24-10:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-10:00"
+            }
+          }
+        },
+        "cashier" : {
+          "102306113" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-19-10:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-10:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-22-10:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-23-10:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-24-10:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-19-10:00"
+            }
+          },
+          "102306114" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-18:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-19-12:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-18:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-12:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-18:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-22-12:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-18:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-12:00"
+            }
+          },
+          "102306115" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-19-16:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-16:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-22-16:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-16:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-25-16:00"
+            }
+          },
+          "102306116" : {
+            "00001" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-22-14:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-23-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-23-14:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-10:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-25-10:00"
+            }
+          }
+        },
+        "cleaning" : {
+          "102306111" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-19-14:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-20-14:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-22-14:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-20:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-14:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 1,
+              "StartDate" : "2016-12-24-10:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-25-10:00"
+            }
+          },
+          "102306119" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-20:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-19-16:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-20:00",
+              "Preference" : 1,
+              "StartDate" : "2016-12-20-16:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-22-16:00",
+              "Preference" : 2,
+              "StartDate" : "2016-12-22-14:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-23-16:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-23-14:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-24-20:00",
+              "Preference" : 4,
+              "StartDate" : "2016-12-24-15:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-25-20:00",
+              "Preference" : 3,
+              "StartDate" : "2016-12-25-15:00"
+            }
+          }
+        }
+      },
+      "currentEvent" : "2016-12-19",
       "setEventSwitch" : true
+    },
+    "020" : {
+      "2016-12-19" : {
+        "beverage" : {
+          "102306120" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-6:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-6:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-6:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-6:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-6:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-6:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-6:00"
+            }
+          },
+          "102306122" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-6:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-6:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-6:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-6:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-6:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-6:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-6:00"
+            }
+          },
+          "102306128" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-6:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-6:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-6:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-6:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-6:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-6:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-6:00"
+            }
+          }
+        },
+        "cashier" : {
+          "102306123" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-6:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-6:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-6:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-6:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-6:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-6:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-6:00"
+            }
+          },
+          "102306124" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-6:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-6:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-6:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-6:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-6:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-6:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-6:00"
+            }
+          }
+        },
+        "cleaning" : {
+          "102306127" : {
+            "00001" : {
+              "EndDate" : "2016-12-19-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-19-8:00"
+            },
+            "00002" : {
+              "EndDate" : "2016-12-20-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-20-8:00"
+            },
+            "00003" : {
+              "EndDate" : "2016-12-21-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-21-8:00"
+            },
+            "00004" : {
+              "EndDate" : "2016-12-22-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-22-8:00"
+            },
+            "00005" : {
+              "EndDate" : "2016-12-23-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-23-8:00"
+            },
+            "00006" : {
+              "EndDate" : "2016-12-24-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-24-8:00"
+            },
+            "00007" : {
+              "EndDate" : "2016-12-25-23:00",
+              "Preference" : 5,
+              "StartDate" : "2016-12-25-8:00"
+            }
+          }
+        }
+      }
     }
   },
   "employeeShift" : {
     "010" : {
       "2016-10-16" : {
         "102306111" : {
-          "001" : {
-            "End Date" : "2016-10-16-19:00",
-            "Start Date" : "2016-10-16-5:00"
+          "-KYnGPyNzK-TMoif_yCs" : {
+            "endDate" : "2016-10-06-15:00",
+            "startDate" : "2016-10-06-09:00"
+          },
+          "-KYnGPyRg4dyHzI2x2KJ" : {
+            "ID" : "102306111",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }
+        },
+        "102306222" : {
+          "-KYnGPyWfrb2PS6Kl7PN" : {
+            "ID" : "102306222",
+            "endDate" : "2016-10-06-16:00",
+            "startDate" : "2016-10-06-09:00"
+          },
+          "-KYnGPyZHKOLFO7jxfeK" : {
+            "ID" : "102306222",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }
+        },
+        "102306333" : {
+          "-KYnGPyaxP-X66RanKnS" : {
+            "ID" : "102306333",
+            "endDate" : "2016-10-06-22:00",
+            "startDate" : "2016-10-06-15:00"
+          }
+        },
+        "102306444" : {
+          "-KYnGPyoyaQi3c1p0Dqf" : {
+            "ID" : "102306444",
+            "endDate" : "2016-10-07-22:00",
+            "startDate" : "2016-10-07-16:00"
           }
         }
       },
       "2016-10-30" : {
-        "102306111" : {
+        "102306110" : {
           "002" : {
             "End Date" : "2016-10-31-23:00",
-            "Start Date" : "2016-10-31-19:00"
+            "Start Date" : "2016-10-31-05:00"
           },
           "003" : {
             "End Date" : "2016-11-01-13:00",
@@ -239,67 +1153,1019 @@
         }
       },
       "2016-11-06" : {
-        "102306111" : {
+        "102306110" : {
           "006" : {
-            "End Date" : "2016-11-11-5:00",
+            "End Date" : "2016-11-11-10:00",
             "Start Date" : "2016-11-11-4:00",
             "arrivalTime" : "2016-11-11-4:39",
             "departureTime" : "2016-11-11-4:41",
             "late" : "2357",
             "leaveEarly" : "1090"
           }
+        },
+        "announcementSwitch" : true
+      },
+      "2016-11-13" : {
+        "102306111" : {
+          "001" : {
+            "End Date" : "2016-11-13-23:00",
+            "Start Date" : "2016-11-13-19:00"
+          },
+          "002" : {
+            "End Date" : "2016-11-14-20:00",
+            "Start Date" : "2016-11-14-13:00"
+          }
         }
+      },
+      "2016-11-20" : {
+        "102306111" : {
+          "001" : {
+            "End Date" : "2016-11-20-22:00",
+            "Start Date" : "2016-11-20-18:00"
+          },
+          "002" : {
+            "End Date" : "2016-11-21-23:00",
+            "Start Date" : "2016-11-21-21:00"
+          },
+          "003" : {
+            "End Date" : "2016-11-22-20:00",
+            "Start Date" : "2016-11-22-13:00"
+          },
+          "007" : {
+            "End Date" : "2016-11-26-23:40",
+            "Start Date" : "2016-11-26-23:20"
+          }
+        },
+        "102306112" : {
+          "004" : {
+            "End Date" : "2016-11-23-20:00",
+            "Start Date" : "2016-11-23-13:00",
+            "arrivalTime" : "2016-11-23-13:05",
+            "departureTime" : "2016-11-23-20:00"
+          },
+          "005" : {
+            "End Date" : "2016-11-24-16:00",
+            "Start Date" : "2016-11-24-8:00"
+          }
+        }
+      },
+      "2016-11-6" : {
+        "announcementSwitch" : true
+      },
+      "2016-12-12" : {
+        "102306110" : "y",
+        "102306111" : "f",
+        "102306112" : "f",
+        "102306113" : "f",
+        "102306114" : "r",
+        "102306115" : "r",
+        "102306116" : "r",
+        "102306117" : "r",
+        "102306118" : "f",
+        "102306119" : "f"
+      },
+      "2016-12-19" : {
+        "102306110" : {
+          "-KZEjNTKIo-RIVffK5jz" : {
+            "endDate" : "2016-12-19-16:00",
+            "startDate" : "2016-12-19-10:00"
+          },
+          "-KZEjNTN-_8bVgvAiDd5" : {
+            "endDate" : "2016-12-20-16:00",
+            "startDate" : "2016-12-20-10:00"
+          },
+          "-KZEjNTOUme8XuiLuqtX" : {
+            "endDate" : "2016-12-22-16:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNTQ3bougDALXWIE" : {
+            "endDate" : "2016-12-23-16:00",
+            "startDate" : "2016-12-23-10:00"
+          },
+          "-KZEjNTR8NlFilugxfc7" : {
+            "endDate" : "2016-12-24-16:00",
+            "startDate" : "2016-12-24-10:00"
+          },
+          "-KZEjNTSsvcCTjIfuCEA" : {
+            "endDate" : "2016-12-25-16:00",
+            "startDate" : "2016-12-25-10:00"
+          }
+        },
+        "102306111" : {
+          "-KZEjNYVtrlRL9miUUPh" : {
+            "endDate" : "2016-12-19-16:00",
+            "startDate" : "2016-12-19-10:00"
+          },
+          "-KZEjNYVtrlRL9miUUPi" : {
+            "endDate" : "2016-12-20-16:00",
+            "startDate" : "2016-12-20-10:00"
+          },
+          "-KZEjNYWGkCGcRHww1Ik" : {
+            "endDate" : "2016-12-22-16:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNYWGkCGcRHww1Il" : {
+            "endDate" : "2016-12-23-16:00",
+            "startDate" : "2016-12-23-10:00"
+          },
+          "-KZEjNYXsdAEVmILyIcI" : {
+            "endDate" : "2016-12-24-16:00",
+            "startDate" : "2016-12-24-10:00"
+          },
+          "-KZEjNYXsdAEVmILyIcJ" : {
+            "endDate" : "2016-12-25-16:00",
+            "startDate" : "2016-12-25-10:00"
+          }
+        },
+        "102306112" : {
+          "-KZEjNTciY3xUbBycnEA" : {
+            "endDate" : "2016-12-22-14:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNTdsD75g-vNyUIZ" : {
+            "endDate" : "2016-12-22-20:00",
+            "startDate" : "2016-12-22-16:00"
+          },
+          "-KZEjNTeCwbcpd8Kh0Sb" : {
+            "endDate" : "2016-12-24-20:00",
+            "startDate" : "2016-12-24-14:00"
+          },
+          "-KZEjNThArzW_G634LJT" : {
+            "endDate" : "2016-12-25-20:00",
+            "startDate" : "2016-12-25-14:00"
+          }
+        },
+        "102306113" : {
+          "-KZEjNXGW8wFAdOBjsYk" : {
+            "endDate" : "2016-12-19-16:00",
+            "startDate" : "2016-12-19-10:00"
+          },
+          "-KZEjNXH1IV0IddsM0Cc" : {
+            "endDate" : "2016-12-20-16:00",
+            "startDate" : "2016-12-20-10:00"
+          },
+          "-KZEjNXH1IV0IddsM0Cd" : {
+            "endDate" : "2016-12-22-16:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNXIgX9xaz4f7_Y-" : {
+            "endDate" : "2016-12-23-16:00",
+            "startDate" : "2016-12-23-10:00"
+          },
+          "-KZEjNXIgX9xaz4f7_Y0" : {
+            "endDate" : "2016-12-24-16:00",
+            "startDate" : "2016-12-24-10:00"
+          },
+          "-KZEjNXIgX9xaz4f7_Y1" : {
+            "endDate" : "2016-12-25-16:00",
+            "startDate" : "2016-12-25-10:00"
+          }
+        },
+        "102306114" : {
+          "-KZEjNXPsEp_ncjFVl89" : {
+            "endDate" : "2016-12-22-14:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNXQjwE657a6a6xS" : {
+            "endDate" : "2016-12-22-20:00",
+            "startDate" : "2016-12-22-16:00"
+          },
+          "-KZEjNXSQHo8Uhjmp82C" : {
+            "endDate" : "2016-12-24-20:00",
+            "startDate" : "2016-12-24-14:00"
+          },
+          "-KZEjNXT3GLr_axf6mlq" : {
+            "endDate" : "2016-12-25-20:00",
+            "startDate" : "2016-12-25-14:00"
+          }
+        },
+        "102306115" : {
+          "-KZEjNX_oS3in7LLM8Oj" : {
+            "endDate" : "2016-12-19-20:00",
+            "startDate" : "2016-12-19-16:00"
+          },
+          "-KZEjNXaE3XxjhG2nZ9k" : {
+            "endDate" : "2016-12-20-20:00",
+            "startDate" : "2016-12-20-16:00"
+          },
+          "-KZEjNXbPL8J9z98MLIc" : {
+            "endDate" : "2016-12-22-20:00",
+            "startDate" : "2016-12-22-16:00"
+          },
+          "-KZEjNXcbEWTv86Ld2PY" : {
+            "endDate" : "2016-12-23-14:00",
+            "startDate" : "2016-12-23-10:00"
+          },
+          "-KZEjNXcbEWTv86Ld2PZ" : {
+            "endDate" : "2016-12-23-20:00",
+            "startDate" : "2016-12-23-16:00"
+          }
+        },
+        "102306116" : {
+          "-KZEjNXplKwsrB7Y4KXq" : {
+            "endDate" : "2016-12-19-14:00",
+            "startDate" : "2016-12-19-10:00"
+          },
+          "-KZEjNXplKwsrB7Y4KXr" : {
+            "endDate" : "2016-12-19-20:00",
+            "startDate" : "2016-12-19-16:00"
+          },
+          "-KZEjNXqGAv7Olv2NVBe" : {
+            "endDate" : "2016-12-20-14:00",
+            "startDate" : "2016-12-20-10:00"
+          },
+          "-KZEjNXrBBx8J0mSAy5A" : {
+            "endDate" : "2016-12-20-20:00",
+            "startDate" : "2016-12-20-16:00"
+          },
+          "-KZEjNXrBBx8J0mSAy5B" : {
+            "endDate" : "2016-12-23-20:00",
+            "startDate" : "2016-12-23-16:00"
+          },
+          "-KZEjNXrBBx8J0mSAy5C" : {
+            "endDate" : "2016-12-24-14:00",
+            "startDate" : "2016-12-24-10:00"
+          },
+          "-KZEjNXs61Vgd5accY3q" : {
+            "endDate" : "2016-12-24-20:00",
+            "startDate" : "2016-12-24-16:00"
+          },
+          "-KZEjNXs61Vgd5accY3r" : {
+            "endDate" : "2016-12-25-14:00",
+            "startDate" : "2016-12-25-10:00"
+          },
+          "-KZEjNXs61Vgd5accY3s" : {
+            "endDate" : "2016-12-25-20:00",
+            "startDate" : "2016-12-25-16:00"
+          }
+        },
+        "102306117" : {
+          "-KZEjNTuX3H0wekvO6t5" : {
+            "endDate" : "2016-12-19-20:00",
+            "startDate" : "2016-12-19-16:00"
+          },
+          "-KZEjNTw_-L4LbHJC-nv" : {
+            "endDate" : "2016-12-20-20:00",
+            "startDate" : "2016-12-20-16:00"
+          },
+          "-KZEjNTxBft8JSj2txyq" : {
+            "endDate" : "2016-12-22-20:00",
+            "startDate" : "2016-12-22-16:00"
+          },
+          "-KZEjNTy0uRarx4mUQs2" : {
+            "endDate" : "2016-12-23-14:00",
+            "startDate" : "2016-12-23-10:00"
+          },
+          "-KZEjNU1xcMg-Twdx7jC" : {
+            "endDate" : "2016-12-23-20:00",
+            "startDate" : "2016-12-23-16:00"
+          }
+        },
+        "102306118" : {
+          "-KZEjNUXrXSMcY6YLjrK" : {
+            "endDate" : "2016-12-19-14:00",
+            "startDate" : "2016-12-19-10:00"
+          },
+          "-KZEjNUZ3SUJQVK2HggU" : {
+            "endDate" : "2016-12-19-20:00",
+            "startDate" : "2016-12-19-16:00"
+          },
+          "-KZEjNUaN02vVNEU9Az-" : {
+            "endDate" : "2016-12-20-14:00",
+            "startDate" : "2016-12-20-10:00"
+          },
+          "-KZEjNUcSDG9SYlGSB5w" : {
+            "endDate" : "2016-12-20-20:00",
+            "startDate" : "2016-12-20-16:00"
+          },
+          "-KZEjNUfgO08l6ZTVlxY" : {
+            "endDate" : "2016-12-23-20:00",
+            "startDate" : "2016-12-23-16:00"
+          },
+          "-KZEjNUgOl9-qj18r0_H" : {
+            "endDate" : "2016-12-24-14:00",
+            "startDate" : "2016-12-24-10:00"
+          },
+          "-KZEjNUioYdSltg8yGxU" : {
+            "endDate" : "2016-12-24-20:00",
+            "startDate" : "2016-12-24-16:00"
+          },
+          "-KZEjNUjlO3o6AwMdSRD" : {
+            "endDate" : "2016-12-25-14:00",
+            "startDate" : "2016-12-25-10:00"
+          },
+          "-KZEjNUk0gCS6aoxN0Y1" : {
+            "endDate" : "2016-12-25-20:00",
+            "startDate" : "2016-12-25-16:00"
+          }
+        },
+        "102306119" : {
+          "-KZEjNYZz2wzDTzHAvFm" : {
+            "endDate" : "2016-12-22-14:00",
+            "startDate" : "2016-12-22-10:00"
+          },
+          "-KZEjNY_UIXZvZCzqjMY" : {
+            "endDate" : "2016-12-22-20:00",
+            "startDate" : "2016-12-22-16:00"
+          },
+          "-KZEjNY_UIXZvZCzqjMZ" : {
+            "endDate" : "2016-12-24-20:00",
+            "startDate" : "2016-12-24-14:00"
+          },
+          "-KZEjNY_UIXZvZCzqjM_" : {
+            "endDate" : "2016-12-25-20:00",
+            "startDate" : "2016-12-25-14:00"
+          }
+        },
+        "announcementSwitch" : false
       },
       "currentShift" : "2016-10-30"
     },
     "020" : {
-      "2016-10-30" : {
+      "2016-10-16" : {
+        "102306111" : {
+          "-KYnGPyNzK-TMoif_yCs" : {
+            "endDate" : "2016-10-06-15:00",
+            "startDate" : "2016-10-06-09:00"
+          },
+          "-KYnGPyRg4dyHzI2x2KJ" : {
+            "ID" : "102306111",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }
+        },
         "102306222" : {
+          "-KYnGPyWfrb2PS6Kl7PN" : {
+            "ID" : "102306222",
+            "endDate" : "2016-10-06-16:00",
+            "startDate" : "2016-10-06-09:00"
+          },
+          "-KYnGPyZHKOLFO7jxfeK" : {
+            "ID" : "102306222",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }
+        },
+        "102306333" : {
+          "-KYnGPyaxP-X66RanKnS" : {
+            "ID" : "102306333",
+            "endDate" : "2016-10-06-22:00",
+            "startDate" : "2016-10-06-15:00"
+          }
+        },
+        "102306444" : {
+          "-KYnGPyoyaQi3c1p0Dqf" : {
+            "ID" : "102306444",
+            "endDate" : "2016-10-07-22:00",
+            "startDate" : "2016-10-07-16:00"
+          }
+        }
+      },
+      "2016-10-30" : {
+        "102306110" : {
+          "002" : {
+            "End Date" : "2016-10-31-23:00",
+            "Start Date" : "2016-10-31-05:00"
+          },
+          "003" : {
+            "End Date" : "2016-11-01-13:00",
+            "Start Date" : "2016-11-01-5:00"
+          },
+          "004" : {
+            "End Date" : "2016-11-02-19:00",
+            "Start Date" : "2016-11-02-12:00"
+          },
           "005" : {
-            "End Date" : "2016-11-03-20:00",
-            "Start Date" : "2016-11-03-13:00",
-            "arrivalTime" : "2016-11-03-13:00",
-            "departureTime" : "2016-11-03-20:00"
+            "End Date" : "2016-11-03-15:00",
+            "Start Date" : "2016-11-03-6:00"
           },
           "006" : {
-            "End Date" : "2016-11-04-11:00",
-            "Start Date" : "2016-11-04_6:00"
+            "End Date" : "2016-11-04-23:00",
+            "Start Date" : "2016-11-04-5:00",
+            "arrivalTime" : "2016-11-04-4:46"
+          },
+          "007" : {
+            "End Date" : "2016-11-05-19:00",
+            "Start Date" : "2016-11-05-13:00",
+            "arrivalTime" : "2016-11-05-18:28"
           }
         }
       },
       "2016-11-06" : {
-        "102306221" : {
-          "002" : {
-            "End Date" : "2016-11-07-18:00",
-            "Start Date" : "2016-11-07-11:00",
-            "arrivalTime" : "2016-11-07-12:00",
-            "departureTime" : "2016-11-07-17:00"
-          },
-          "003" : {
-            "End Date" : "2016-11-08-22:00",
-            "Start Date" : "2016-11-08-14:00"
+        "102306110" : {
+          "006" : {
+            "End Date" : "2016-11-11-10:00",
+            "Start Date" : "2016-11-11-4:00",
+            "arrivalTime" : "2016-11-11-4:39",
+            "departureTime" : "2016-11-11-4:41",
+            "late" : "2357",
+            "leaveEarly" : "1090"
           }
         },
-        "102306222" : {
+        "announcementSwitch" : true
+      },
+      "2016-11-13" : {
+        "102306111" : {
           "001" : {
-            "End Date" : "2016-11-06-20:00",
-            "Start Date" : "2016-11-06-13:00",
-            "arrivalTime" : "2016-11-06-13:00",
-            "departureTime" : "2016-11-06-19:00"
+            "End Date" : "2016-11-13-23:00",
+            "Start Date" : "2016-11-13-19:00"
           },
           "002" : {
-            "End Date" : "2016-11-07-20:00",
-            "Start Date" : "2016-11-07-13:00",
-            "arrivalTime" : "2016-11-07-14:00",
-            "departureTime" : "2016-11-07-20:00"
+            "End Date" : "2016-11-14-20:00",
+            "Start Date" : "2016-11-14-13:00"
+          }
+        }
+      },
+      "2016-11-20" : {
+        "102306111" : {
+          "001" : {
+            "End Date" : "2016-11-20-22:00",
+            "Start Date" : "2016-11-20-18:00"
+          },
+          "002" : {
+            "End Date" : "2016-11-21-23:00",
+            "Start Date" : "2016-11-21-21:00"
           },
           "003" : {
-            "End Date" : "2016-11-08-20:00",
-            "Start Date" : "2016-11-08-13:00"
+            "End Date" : "2016-11-22-20:00",
+            "Start Date" : "2016-11-22-13:00"
+          },
+          "007" : {
+            "End Date" : "2016-11-26-23:40",
+            "Start Date" : "2016-11-26-23:20"
+          }
+        },
+        "102306112" : {
+          "004" : {
+            "End Date" : "2016-11-23-20:00",
+            "Start Date" : "2016-11-23-13:00",
+            "arrivalTime" : "2016-11-23-13:05",
+            "departureTime" : "2016-11-23-20:00"
+          },
+          "005" : {
+            "End Date" : "2016-11-24-16:00",
+            "Start Date" : "2016-11-24-8:00"
+          }
+        }
+      },
+      "2016-11-6" : {
+        "announcementSwitch" : true
+      },
+      "2016-12-11" : {
+        "102306110" : {
+          "001" : {
+            "End Date" : "2016-12-11-19:00",
+            "Start Date" : "2016-12-11-13:00",
+            "arrivalTime" : "2016-12-11-13:00",
+            "departureTime" : "2016-12-11-18:55"
+          }
+        },
+        "102306111" : {
+          "001" : {
+            "End Date" : "2016-12-11-19:00",
+            "Start Date" : "2016-12-11-13:00",
+            "arrivalTime" : "2016-12-11-13:00",
+            "departureTime" : "2016-12-11-18:55"
+          }
+        },
+        "102306112" : {
+          "001" : {
+            "End Date" : "2016-12-11-19:00",
+            "Start Date" : "2016-12-11-13:00",
+            "arrivalTime" : "2016-12-11-13:00",
+            "departureTime" : "2016-12-11-19:00"
           }
         }
       },
       "currentShift" : "2016-10-30"
+    }
+  },
+  "employeeSpare" : {
+    "010" : {
+      "2016-10-16" : {
+        "102306111" : {
+          "-KYnGPysDQJcZb4U2CfB" : {
+            "endDate" : "2016-10-06-22:00",
+            "startDate" : "2016-10-06-15:00"
+          },
+          "-KYnGPysDQJcZb4U2CfC" : {
+            "endDate" : "2016-10-07-22:00",
+            "startDate" : "2016-10-07-16:00"
+          }
+        },
+        "102306333" : {
+          "-KYnGPyvztXrLYv0yk6R" : {
+            "endDate" : "2016-10-06-15:00",
+            "startDate" : "2016-10-06-09:00"
+          },
+          "-KYnGPyvztXrLYv0yk6S" : {
+            "endDate" : "2016-10-07-22:00",
+            "startDate" : "2016-10-07-16:00"
+          }
+        },
+        "102306444" : {
+          "-KYnGPywWZoJGbWXXhSm" : {
+            "endDate" : "2016-10-06-22:00",
+            "startDate" : "2016-10-06-16:00"
+          }
+        }
+      },
+      "2016-12-19" : {
+        "beverage" : {
+          "102306112" : {
+            "-KZD3L04JstF92fed39s" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD3L04JstF92fed39t" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD3L06QD_GPwwN9UwH" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD57iBi3PDjC6mTs6F" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD57iE38LYpvnVUn93" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD57iKNlD19cOAR9Ma" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZEjNUnV-XIe_ptbZiW" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZEjNUo9Y6aeu88v9xJ" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZEjNUrr76aenm0tgrI" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            }
+          },
+          "102306117" : {
+            "-KZD3L06QD_GPwwN9UwI" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            },
+            "-KZD57iKNlD19cOAR9Mb" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            },
+            "-KZEjNUsNRpVD1Nw4tYe" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            }
+          },
+          "102306118" : {
+            "-KZD3L08HxHfEQ5Qadre" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD3L099QO2rAgoW_Fj" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD3L099QO2rAgoW_Fk" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZD3L099QO2rAgoW_Fl" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            },
+            "-KZD57iMEbQPgKt89E6C" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD57iN6NZozuLwxQ36" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD57iOAcMpdlXgTojE" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZD57iOAcMpdlXgTojF" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            },
+            "-KZEjNUwUkVY6eJ-0alI" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZEjNUwUkVY6eJ-0alJ" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZEjNUxLxIffq3veIvQ" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZEjNUxLxIffq3veIvR" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            }
+          }
+        },
+        "cashier" : {
+          "102306113" : {
+            "-KZD3L2g01VyfTy1EsMv" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZD3L2g01VyfTy1EsMw" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZD3L2g01VyfTy1EsMx" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZD3L2g01VyfTy1EsMy" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZD3L2g01VyfTy1EsMz" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD3L2hvySWE8bgFRj0" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            },
+            "-KZD57kyKFthBvukTwjP" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZD57kzb-2LwbHwxuZv" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZD57kzb-2LwbHwxuZw" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZD57kzb-2LwbHwxuZx" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZD57l-b6vtqwgVi3xS" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD57l-b6vtqwgVi3xT" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            },
+            "-KZEjNXuLGJlrQ3i8JUN" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZEjNXuLGJlrQ3i8JUO" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZEjNXvUG7xfLl4fQam" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZEjNXvUG7xfLl4fQan" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZEjNXvUG7xfLl4fQao" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZEjNXvUG7xfLl4fQap" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            }
+          },
+          "102306114" : {
+            "-KZD3L2hvySWE8bgFRj1" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZD3L2ifqmGA4LnPUZQ" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZD3L2ifqmGA4LnPUZR" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD3L2ifqmGA4LnPUZS" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            },
+            "-KZD57l0JuXWp_-TnZ_V" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZD57l0JuXWp_-TnZ_W" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZD57l1LNhxrPPa0SGJ" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD57l1LNhxrPPa0SGK" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            },
+            "-KZEjNXwGCq9nKqoATbX" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZEjNXwGCq9nKqoATbY" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZEjNXx9nfmx2TakKmU" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZEjNXx9nfmx2TakKmV" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            }
+          },
+          "102306115" : {
+            "-KZD3L2jxUNU5GA0DVrk" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD3L2jxUNU5GA0DVrl" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            },
+            "-KZD57l34Y1S_e6hqxMY" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD57l34Y1S_e6hqxMZ" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            },
+            "-KZEjNXyuYwaTiCJmttr" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZEjNXyuYwaTiCJmtts" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-10:00"
+            }
+          },
+          "102306116" : {
+            "-KZD3L2mciFsBxVoGe_r" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD3L2mciFsBxVoGe_s" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD3L2mciFsBxVoGe_t" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD3L2nsrLwB3WMMfsN" : {
+              "endDate" : "2016-12-23-16:00",
+              "startDate" : "2016-12-23-14:00"
+            },
+            "-KZD3L2nsrLwB3WMMfsO" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZD3L2nsrLwB3WMMfsP" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            },
+            "-KZD57l6j1GcZPPXgJlY" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZD57l7XpQSQKa6xUCR" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZD57l8jE6ij7odEM4s" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD57lAL5lg_k9HRpVH" : {
+              "endDate" : "2016-12-23-16:00",
+              "startDate" : "2016-12-23-14:00"
+            },
+            "-KZD57lClkQ4YXKHDV3z" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZD57lDDjfDEheMS6Hu" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            },
+            "-KZEjNXzWnMUpKMkZYDx" : {
+              "endDate" : "2016-12-19-16:00",
+              "startDate" : "2016-12-19-14:00"
+            },
+            "-KZEjNXzWnMUpKMkZYDy" : {
+              "endDate" : "2016-12-20-16:00",
+              "startDate" : "2016-12-20-14:00"
+            },
+            "-KZEjNY-k-DA3M88vaBf" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZEjNY0Td5HFiWPQZE5" : {
+              "endDate" : "2016-12-23-16:00",
+              "startDate" : "2016-12-23-14:00"
+            },
+            "-KZEjNY1CvYJ0u58CWBW" : {
+              "endDate" : "2016-12-24-16:00",
+              "startDate" : "2016-12-24-14:00"
+            },
+            "-KZEjNY2lRyWpiyXLOXx" : {
+              "endDate" : "2016-12-25-16:00",
+              "startDate" : "2016-12-25-14:00"
+            }
+          }
+        },
+        "cleaning" : {
+          "102306111" : {
+            "-KZD3L3Lg8a3nbcBLH6B" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZD3L3MStcYgPWcaOh0" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZD3L3MStcYgPWcaOh1" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZD3L3MStcYgPWcaOh2" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZD3L3MStcYgPWcaOh3" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD3L3MStcYgPWcaOh4" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO2" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO3" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO4" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO5" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO6" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZD57lkYD-ygewtEUO7" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            },
+            "-KZEjNYaQfVhD94vyn9B" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-16:00"
+            },
+            "-KZEjNYaQfVhD94vyn9C" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-16:00"
+            },
+            "-KZEjNYaQfVhD94vyn9D" : {
+              "endDate" : "2016-12-22-20:00",
+              "startDate" : "2016-12-22-16:00"
+            },
+            "-KZEjNYbSkCbUAH9oOem" : {
+              "endDate" : "2016-12-23-20:00",
+              "startDate" : "2016-12-23-16:00"
+            },
+            "-KZEjNYbSkCbUAH9oOen" : {
+              "endDate" : "2016-12-24-20:00",
+              "startDate" : "2016-12-24-16:00"
+            },
+            "-KZEjNYbSkCbUAH9oOeo" : {
+              "endDate" : "2016-12-25-20:00",
+              "startDate" : "2016-12-25-16:00"
+            }
+          },
+          "102306119" : {
+            "-KZD3L3NET1Yy_4aTcQz" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZD3L3NET1Yy_4aTcR-" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZD3L3NET1Yy_4aTcR0" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD3L3ORMEam5-IlXl5" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            },
+            "-KZD57llHyZJLsQiuf1Y" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZD57llHyZJLsQiuf1Z" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZD57llHyZJLsQiuf1_" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZD57llHyZJLsQiuf1a" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            },
+            "-KZEjNYbSkCbUAH9oOep" : {
+              "endDate" : "2016-12-19-20:00",
+              "startDate" : "2016-12-19-12:00"
+            },
+            "-KZEjNYbSkCbUAH9oOeq" : {
+              "endDate" : "2016-12-20-20:00",
+              "startDate" : "2016-12-20-12:00"
+            },
+            "-KZEjNYchAjjrnXnbsAV" : {
+              "endDate" : "2016-12-22-16:00",
+              "startDate" : "2016-12-22-14:00"
+            },
+            "-KZEjNYchAjjrnXnbsAW" : {
+              "endDate" : "2016-12-23-18:00",
+              "startDate" : "2016-12-23-12:00"
+            }
+          }
+        }
+      },
+      "currentEvent" : "2016-10-16",
+      "setSpareSwitch" : false
+    },
+    "020" : {
+      "2016-12-19" : {
+        "cashier" : {
+          "102306123" : {
+            "00001" : {
+              "endDate" : "2016-12-19-23:00",
+              "startDate" : "2016-12-19-06:00"
+            },
+            "00002" : {
+              "endDate" : "2016-12-20-23:00",
+              "startDate" : "2016-12-20-06:00"
+            },
+            "00003" : {
+              "endDate" : "2016-12-21-23:00",
+              "startDate" : "2016-12-21-06:00"
+            },
+            "00004" : {
+              "endDate" : "2016-12-22-23:00",
+              "startDate" : "2016-12-22-06:00"
+            },
+            "00005" : {
+              "endDate" : "2016-12-23-23:00",
+              "startDate" : "2016-12-23-06:00"
+            },
+            "00006" : {
+              "endDate" : "2016-12-24-23:00",
+              "startDate" : "2016-12-24-06:00"
+            },
+            "00007" : {
+              "endDate" : "2016-12-25-23:00",
+              "startDate" : "2016-12-25-06:00"
+            }
+          }
+        }
+      }
     }
   },
   "managerEvent" : {
@@ -334,6 +2200,156 @@
           "StartDate" : "2016-10-07-16:00"
         }
       },
+      "2016-12-05" : {
+        "1001" : {
+          "EndDate" : "2016-12-05-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-05-06:30",
+          "Supervisor" : 1
+        },
+        "1002" : {
+          "EndDate" : "2016-12-05-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-05-08:00"
+        },
+        "1003" : {
+          "EndDate" : "2016-12-05-23:30",
+          "PartTime" : 2,
+          "StartDate" : "2016-12-05-15:00",
+          "Supervisor" : 1
+        },
+        "2001" : {
+          "EndDate" : "2016-12-06-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-06-06:30",
+          "Supervisor" : 1
+        },
+        "2002" : {
+          "EndDate" : "2016-12-06-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-06-08:00"
+        },
+        "2003" : {
+          "EndDate" : "2016-12-06-23:30",
+          "PartTime" : 2,
+          "StartDate" : "2016-12-06-15:00",
+          "Supervisor" : 1
+        }
+      },
+      "2016-12-19" : {
+        "-KZAylpzzVF1cKfqpTLI" : {
+          "EndDate" : "2016-12-19-14:00",
+          "StartDate" : "2016-12-19-10:00",
+          "beverage" : 2,
+          "cashier" : 0,
+          "cleaning" : 1
+        },
+        "-KZAyuo4i4bFk6Q6tGIe" : {
+          "EndDate" : "2016-12-20-16:00",
+          "StartDate" : "2016-12-20-14:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAz-rcU5b5H4k5wZ7v" : {
+          "EndDate" : "2016-12-19-16:00",
+          "StartDate" : "2016-12-19-14:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAz2yptWiftdw44dAu" : {
+          "EndDate" : "2016-12-19-20:00",
+          "StartDate" : "2016-12-19-16:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAz8go_qV9NkdD0Sne" : {
+          "EndDate" : "2016-12-20-14:00",
+          "StartDate" : "2016-12-20-10:00",
+          "beverage" : 2,
+          "cashier" : 0,
+          "cleaning" : 1
+        },
+        "-KZAzGBLLSkxFNqRie14" : {
+          "EndDate" : "2016-12-22-14:00",
+          "StartDate" : "2016-12-22-10:00",
+          "beverage" : 2,
+          "cashier" : 0,
+          "cleaning" : 1
+        },
+        "-KZAzIwyLeztw-uXb2p4" : {
+          "EndDate" : "2016-12-23-14:00",
+          "StartDate" : "2016-12-23-10:00",
+          "beverage" : 2,
+          "cashier" : 0,
+          "cleaning" : 1
+        },
+        "-KZAzOfscSKPtfzarNEx" : {
+          "EndDate" : "2016-12-22-16:00",
+          "StartDate" : "2016-12-22-14:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAzRE0jzs4GW4ppDtF" : {
+          "EndDate" : "2016-12-23-16:00",
+          "StartDate" : "2016-12-23-14:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAzUlVP3G8DwFwhTVX" : {
+          "EndDate" : "2016-12-20-20:00",
+          "StartDate" : "2016-12-20-16:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAzXKo1RmxT16DtL2X" : {
+          "EndDate" : "2016-12-22-20:00",
+          "StartDate" : "2016-12-22-16:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAzbsBP3k5D_e6hZpv" : {
+          "EndDate" : "2016-12-23-20:00",
+          "StartDate" : "2016-12-23-16:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "-KZAzgNpWEmaEiCXHzci" : {
+          "EndDate" : "2016-12-24-15:00",
+          "StartDate" : "2016-12-24-10:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 2
+        },
+        "-KZAzklS2qHID6BD4JrW" : {
+          "EndDate" : "2016-12-25-15:00",
+          "StartDate" : "2016-12-25-10:00",
+          "beverage" : 2,
+          "cashier" : 1,
+          "cleaning" : 2
+        },
+        "-KZAzoeks-VZgqVfKF19" : {
+          "EndDate" : "2016-12-24-20:00",
+          "StartDate" : "2016-12-24-15:00",
+          "beverage" : 2,
+          "cashier" : 2,
+          "cleaning" : 2
+        },
+        "-KZAzsIGV2Dd5aSHJkpt" : {
+          "EndDate" : "2016-12-25-20:00",
+          "StartDate" : "2016-12-25-15:00",
+          "beverage" : 2,
+          "cashier" : 2,
+          "cleaning" : 2
+        }
+      },
       "2016-2-11" : {
         "-KWI5sXAmmo91iRdDiE_" : {
           "Cleaning" : 0,
@@ -352,88 +2368,710 @@
           "StartDate" : "2018-1-30-00:00"
         }
       },
-      "currentEvent" : "2016-10-05",
-      "currentEventDeadline" : "2017-2-09",
+      "currentEvent" : "2016-12-19",
+      "currentEventDeadline" : "2016-12-19",
       "isSchedulingSwitch" : false,
+      "setEventSwitch" : false
+    },
+    "020" : {
+      "2016-10-05" : {
+        "-KVtXnMVgr3T89n8qOeP" : {
+          "Cleaning" : 0,
+          "Coding" : 2,
+          "Dancing" : 2567,
+          "EndDate" : "2016-10-06-16:00",
+          "StartDate" : "2016-10-06-09:00"
+        },
+        "-KVtXuhAlg9HGbm9wfCX" : {
+          "Cleaning" : 0,
+          "Coding" : 1,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-06-22:00",
+          "StartDate" : "2016-10-06-16:00"
+        },
+        "-KVtY0khjIQBNpta0G6x" : {
+          "Cleaning" : 0,
+          "Coding" : 2,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-07-16:00",
+          "StartDate" : "2016-10-07-09:00"
+        },
+        "-KVtY3wI9hTRLSTY4jdh" : {
+          "Cleaning" : 0,
+          "Coding" : 1,
+          "Dancing" : 0,
+          "EndDate" : "2016-10-07-22:00",
+          "StartDate" : "2016-10-07-16:00"
+        }
+      },
+      "2016-12-05" : {
+        "1001" : {
+          "EndDate" : "2016-12-05-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-05-06:30",
+          "Supervisor" : 1
+        },
+        "1002" : {
+          "EndDate" : "2016-12-05-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-05-08:00"
+        },
+        "1003" : {
+          "EndDate" : "2016-12-05-23:30",
+          "PartTime" : 2,
+          "StartDate" : "2016-12-05-15:00",
+          "Supervisor" : 1
+        },
+        "2001" : {
+          "EndDate" : "2016-12-06-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-06-06:30",
+          "Supervisor" : 1
+        },
+        "2002" : {
+          "EndDate" : "2016-12-06-15:00",
+          "PartTime" : 1,
+          "StartDate" : "2016-12-06-08:00"
+        },
+        "2003" : {
+          "EndDate" : "2016-12-06-23:30",
+          "PartTime" : 2,
+          "StartDate" : "2016-12-06-15:00",
+          "Supervisor" : 1
+        }
+      },
+      "2016-12-19" : {
+        "10001" : {
+          "EndDate" : "2016-12-19-08:00",
+          "StartDate" : "2016-12-19-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10002" : {
+          "EndDate" : "2016-12-19-23:00",
+          "StartDate" : "2016-12-19-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10003" : {
+          "EndDate" : "2016-12-20-08:00",
+          "StartDate" : "2016-12-20-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10004" : {
+          "EndDate" : "2016-12-20-23:00",
+          "StartDate" : "2016-12-20-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10005" : {
+          "EndDate" : "2016-12-21-08:00",
+          "StartDate" : "2016-12-21-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10006" : {
+          "EndDate" : "2016-12-21-23:00",
+          "StartDate" : "2016-12-21-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10007" : {
+          "EndDate" : "2016-12-22-08:00",
+          "StartDate" : "2016-12-22-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10008" : {
+          "EndDate" : "2016-12-22-23:00",
+          "StartDate" : "2016-12-22-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10009" : {
+          "EndDate" : "2016-12-23-08:00",
+          "StartDate" : "2016-12-23-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10010" : {
+          "EndDate" : "2016-12-23-23:00",
+          "StartDate" : "2016-12-23-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10011" : {
+          "EndDate" : "2016-12-24-08:00",
+          "StartDate" : "2016-12-24-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10012" : {
+          "EndDate" : "2016-12-24-23:00",
+          "StartDate" : "2016-12-24-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        },
+        "10013" : {
+          "EndDate" : "2016-12-25-08:00",
+          "StartDate" : "2016-12-25-06:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 0
+        },
+        "10014" : {
+          "EndDate" : "2016-12-25-23:00",
+          "StartDate" : "2016-12-25-08:00",
+          "beverage" : 1,
+          "cashier" : 1,
+          "cleaning" : 1
+        }
+      },
+      "2016-2-11" : {
+        "-KWI5sXAmmo91iRdDiE_" : {
+          "Cleaning" : 0,
+          "Coding" : 0,
+          "Dancing" : 0,
+          "EndDate" : "2016-2-13-06:00",
+          "StartDate" : "2016-2-13-00:00"
+        }
+      },
+      "2018-1-29" : {
+        "-KVE1CesluXg1jlQtzgV" : {
+          "Cleaning" : 0,
+          "Coding" : 0,
+          "Dancing" : 0,
+          "EndDate" : "2018-1-30-07:00",
+          "StartDate" : "2018-1-30-00:00"
+        }
+      },
+      "currentEvent" : "2016-12-19",
+      "currentEventDeadline" : "2016-11-30",
+      "isSchedulingSwitch" : true,
       "setEventSwitch" : true
     }
   },
   "managerShift" : {
     "010" : {
-      "2016-10-16" : {
-        "A01AASSDDFFGG" : {
-          "Cleaning" : [ {
-            "EndDate" : "2016-10-17-12:00",
-            "Name" : "How",
-            "StartDate" : "2016-10-17-0:00"
-          }, {
-            "EndDate" : "2016-10-17-9:00",
-            "Name" : "QQ",
-            "StartDate" : "2016-10-17-3:00"
-          } ],
+      "2016-10-06" : {
+        "Day1" : {
           "Coding" : [ {
-            "EndDate" : "2016-10-17-12:00",
-            "Name" : "Frank",
-            "StartDate" : "2016-10-17-0:00"
+            "ID" : "102306111",
+            "endDate" : "2016-10-06-15:00",
+            "startDate" : "2016-10-06-09:00"
           }, {
-            "EndDate" : "2016-10-17-9:00",
-            "Name" : "Fliss",
-            "StartDate" : "2016-10-17-2:00"
-          } ],
-          "Dancing" : [ {
-            "EndDate" : "2016-10-17-12:00",
-            "Name" : "Siang",
-            "StartDate" : "2016-10-17-0:00"
+            "ID" : "102306222",
+            "endDate" : "2016-10-06-16:00",
+            "startDate" : "2016-10-06-09:00"
           }, {
-            "EndDate" : "2016-10-17-9:00",
-            "Name" : "Fliss",
-            "StartDate" : "2016-10-17-3:00"
-          } ],
-          "End Date" : "2016-10-17-12:00",
-          "Start Date" : "2016-10-17-0:00",
-          "Type" : "Morning"
+            "ID" : "102306333",
+            "endDate" : "2016-10-06-22:00",
+            "startDate" : "2016-10-06-15:00"
+          } ]
+        },
+        "Day2" : {
+          "Coding" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }, {
+            "ID" : "102306222",
+            "endDate" : "2016-10-07-16:00",
+            "startDate" : "2016-10-07-09:00"
+          }, {
+            "ID" : "102306444",
+            "endDate" : "2016-10-07-22:00",
+            "startDate" : "2016-10-07-16:00"
+          } ]
         }
       },
-      "currentShift" : "2016-10-16"
+      "2016-10-16" : {
+        "A01AASSDDFFGG" : {
+          "EndDate" : "2016-10-17-12:00",
+          "StartDate" : "2016-10-17-5:00",
+          "Type" : "Morning",
+          "beverage" : [ {
+            "EndDate" : "2016-10-17-13:00",
+            "Name" : "FW",
+            "StartDate" : "2016-10-17-10:00",
+            "late" : "236",
+            "leaveEarly" : "44"
+          }, {
+            "EndDate" : "2016-10-17-13:00",
+            "Name" : "王宥翔",
+            "StartDate" : "2016-10-17-9:00",
+            "late" : "23"
+          } ],
+          "cashier" : [ {
+            "EndDate" : "2016-10-17-12:00",
+            "Name" : "葉大雄",
+            "StartDate" : "2016-10-17-0:00",
+            "late" : "23",
+            "leaveEarly" : "233"
+          }, {
+            "EndDate" : "2016-10-17-9:00",
+            "Name" : "FH",
+            "StartDate" : "2016-10-17-3:00"
+          } ],
+          "cleaning" : [ {
+            "EndDate" : "2016-10-23-12:00",
+            "Name" : "葉浩平",
+            "StartDate" : "2016-10-23-0:00"
+          }, {
+            "EndDate" : "2016-10-23-9:00",
+            "Name" : "盧允元",
+            "StartDate" : "2016-10-23-3:00"
+          } ]
+        },
+        "announcementSwitch" : true
+      },
+      "2016-10-23" : {
+        "A01AASSDDFFGG" : {
+          "EndDate" : "2016-10-23-12:00",
+          "StartDate" : "2016-10-23-5:00",
+          "Type" : "Morning",
+          "beverage" : [ {
+            "EndDate" : "2016-10-23-13:00",
+            "Name" : "FW",
+            "StartDate" : "2016-10-23-10:00"
+          }, {
+            "EndDate" : "2016-10-23-13:00",
+            "Name" : "FW",
+            "StartDate" : "2016-10-23-9:00"
+          } ],
+          "cashier" : [ {
+            "EndDate" : "2016-10-23-12:00",
+            "Name" : "FH",
+            "StartDate" : "2016-10-23-0:00"
+          }, {
+            "EndDate" : "2016-10-23-9:00",
+            "Name" : "FH",
+            "StartDate" : "2016-10-23-3:00"
+          } ],
+          "cleaning" : [ {
+            "EndDate" : "2016-10-23-12:00",
+            "Name" : "葉浩平",
+            "StartDate" : "2016-10-23-0:00"
+          }, {
+            "EndDate" : "2016-10-23-9:00",
+            "Name" : "GY",
+            "StartDate" : "2016-10-23-3:00"
+          } ]
+        },
+        "announcementSwitch" : true
+      },
+      "2016-12-19" : {
+        "Day1" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-19-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-19-10:00"
+          }, {
+            "ID" : "102306117",
+            "endDate" : "2016-12-19-20:00",
+            "name" : "小酸梅",
+            "startDate" : "2016-12-19-16:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-19-14:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-19-10:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-19-20:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-19-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-19-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-19-10:00"
+          }, {
+            "ID" : "102306115",
+            "endDate" : "2016-12-19-20:00",
+            "name" : "小可愛",
+            "startDate" : "2016-12-19-16:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-19-14:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-19-10:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-19-20:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-19-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-19-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-19-10:00"
+          } ],
+          "EndDate" : "2016-12-19-20:00",
+          "StartDate" : "2016-12-19-10:00"
+        },
+        "Day2" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-20-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-20-10:00"
+          }, {
+            "ID" : "102306117",
+            "endDate" : "2016-12-20-20:00",
+            "name" : "小酸梅",
+            "startDate" : "2016-12-20-16:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-20-14:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-20-10:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-20-20:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-20-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-20-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-20-10:00"
+          }, {
+            "ID" : "102306115",
+            "endDate" : "2016-12-20-20:00",
+            "name" : "小可愛",
+            "startDate" : "2016-12-20-16:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-20-14:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-20-10:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-20-20:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-20-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-20-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-20-10:00"
+          } ],
+          "EndDate" : "2016-12-20-20:00",
+          "StartDate" : "2016-12-20-10:00"
+        },
+        "Day3" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-22-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306112",
+            "endDate" : "2016-12-22-14:00",
+            "name" : "王宥翔",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306112",
+            "endDate" : "2016-12-22-20:00",
+            "name" : "王宥翔",
+            "startDate" : "2016-12-22-16:00"
+          }, {
+            "ID" : "102306117",
+            "endDate" : "2016-12-22-20:00",
+            "name" : "小酸梅",
+            "startDate" : "2016-12-22-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-22-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306114",
+            "endDate" : "2016-12-22-14:00",
+            "name" : "葉大雄",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306114",
+            "endDate" : "2016-12-22-20:00",
+            "name" : "葉大雄",
+            "startDate" : "2016-12-22-16:00"
+          }, {
+            "ID" : "102306115",
+            "endDate" : "2016-12-22-20:00",
+            "name" : "小可愛",
+            "startDate" : "2016-12-22-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-22-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306119",
+            "endDate" : "2016-12-22-14:00",
+            "name" : "盧允元",
+            "startDate" : "2016-12-22-10:00"
+          }, {
+            "ID" : "102306119",
+            "endDate" : "2016-12-22-20:00",
+            "name" : "盧允元",
+            "startDate" : "2016-12-22-16:00"
+          } ],
+          "EndDate" : "2016-12-22-20:00",
+          "StartDate" : "2016-12-22-10:00"
+        },
+        "Day4" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-23-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-23-10:00"
+          }, {
+            "ID" : "102306117",
+            "endDate" : "2016-12-23-14:00",
+            "name" : "小酸梅",
+            "startDate" : "2016-12-23-10:00"
+          }, {
+            "ID" : "102306117",
+            "endDate" : "2016-12-23-20:00",
+            "name" : "小酸梅",
+            "startDate" : "2016-12-23-16:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-23-20:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-23-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-23-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-23-10:00"
+          }, {
+            "ID" : "102306115",
+            "endDate" : "2016-12-23-14:00",
+            "name" : "小可愛",
+            "startDate" : "2016-12-23-10:00"
+          }, {
+            "ID" : "102306115",
+            "endDate" : "2016-12-23-20:00",
+            "name" : "小可愛",
+            "startDate" : "2016-12-23-16:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-23-20:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-23-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-23-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-23-10:00"
+          } ],
+          "EndDate" : "2016-12-23-20:00",
+          "StartDate" : "2016-12-23-10:00"
+        },
+        "Day5" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-24-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-24-10:00"
+          }, {
+            "ID" : "102306112",
+            "endDate" : "2016-12-24-20:00",
+            "name" : "王宥翔",
+            "startDate" : "2016-12-24-14:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-24-14:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-24-10:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-24-20:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-24-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-24-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-24-10:00"
+          }, {
+            "ID" : "102306114",
+            "endDate" : "2016-12-24-20:00",
+            "name" : "葉大雄",
+            "startDate" : "2016-12-24-14:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-24-14:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-24-10:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-24-20:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-24-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-24-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-24-10:00"
+          }, {
+            "ID" : "102306119",
+            "endDate" : "2016-12-24-20:00",
+            "name" : "盧允元",
+            "startDate" : "2016-12-24-14:00"
+          } ],
+          "EndDate" : "2016-12-24-20:00",
+          "StartDate" : "2016-12-24-10:00"
+        },
+        "Day6" : {
+          "beverage" : [ {
+            "ID" : "102306110",
+            "endDate" : "2016-12-25-16:00",
+            "name" : "林聖翔",
+            "startDate" : "2016-12-25-10:00"
+          }, {
+            "ID" : "102306112",
+            "endDate" : "2016-12-25-20:00",
+            "name" : "王宥翔",
+            "startDate" : "2016-12-25-14:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-25-14:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-25-10:00"
+          }, {
+            "ID" : "102306118",
+            "endDate" : "2016-12-25-20:00",
+            "name" : "大平台",
+            "startDate" : "2016-12-25-16:00"
+          } ],
+          "cashier" : [ {
+            "ID" : "102306113",
+            "endDate" : "2016-12-25-16:00",
+            "name" : "侯雅方",
+            "startDate" : "2016-12-25-10:00"
+          }, {
+            "ID" : "102306114",
+            "endDate" : "2016-12-25-20:00",
+            "name" : "葉大雄",
+            "startDate" : "2016-12-25-14:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-25-14:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-25-10:00"
+          }, {
+            "ID" : "102306116",
+            "endDate" : "2016-12-25-20:00",
+            "name" : "阿土伯",
+            "startDate" : "2016-12-25-16:00"
+          } ],
+          "cleaning" : [ {
+            "ID" : "102306111",
+            "endDate" : "2016-12-25-16:00",
+            "name" : "葉浩平",
+            "startDate" : "2016-12-25-10:00"
+          }, {
+            "ID" : "102306119",
+            "endDate" : "2016-12-25-20:00",
+            "name" : "盧允元",
+            "startDate" : "2016-12-25-14:00"
+          } ],
+          "EndDate" : "2016-12-25-20:00",
+          "StartDate" : "2016-12-25-10:00"
+        },
+        "announcementSwitch" : false
+      },
+      "currentShift" : "2016-12-19"
     }
   },
   "store" : {
     "010" : {
       "address" : "北市文山區指南路",
+      "businessHour" : {
+        "endHour" : "20:00",
+        "startHour" : "10:00"
+      },
       "distance" : {
         "020" : "5",
         "030" : "10"
       },
-      "district" : "districtID001",
+      "district" : "100",
       "location" : {
         "latitude" : 12345678,
         "longitude" : 87654321
       },
       "members" : {
+        "102306110" : true,
         "102306111" : true,
-        "102306112" : true
+        "102306112" : true,
+        "102306113" : true,
+        "102306114" : true,
+        "102306115" : true,
+        "102306116" : true,
+        "102306117" : true,
+        "102306118" : true,
+        "102306119" : true
       },
       "name" : "政大店",
       "transferable" : {
         "020" : true,
-        "030" : true
+        "030" : false
       }
     },
     "020" : {
       "address" : "台北市",
+      "businessHour" : {
+        "endHour" : "23:00",
+        "startHour" : "06:00"
+      },
       "distance" : {
         "020" : "5",
         "030" : "15",
         "040" : "20"
       },
-      "district" : "districtID002",
+      "district" : "200",
       "location" : {
         "latitude" : 87654321,
         "longitude" : 12345678
       },
       "members" : {
-        "102306221" : true,
-        "102306222" : true
+        "102306120" : true,
+        "102306121" : true,
+        "102306122" : true,
+        "102306123" : true,
+        "102306124" : true,
+        "102306125" : true,
+        "102306126" : true,
+        "102306127" : true,
+        "102306128" : true,
+        "102306129" : true
       },
       "name" : "木新店",
       "transferable" : {
